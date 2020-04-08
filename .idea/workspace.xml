@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e259493a-74dc-4314-b66a-f1ea2c9fb99a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SS-TP1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SS-TP1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_annotation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javax_annotation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/META-INF/SS-TP1.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/database/StartSQLite.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/database/database.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/database/sqlite3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.annotation.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.ejb.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.jms.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.persistence.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.resource.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.servlet-api-3.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.servlet.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.servlet.jsp.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/javax.transaction.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/lib/sqlite-jdbc-3.30.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/web/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/database/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Authenticator/AuthenticatorClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Authenticator/AuthenticatorClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Authenticator/AuthenticatorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Authenticator/AuthenticatorInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/AccountsTableClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/AccountsTableClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/AccountsTableInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/AccountsTableInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Connection/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Table/TableClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Table/TableClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Table/TableInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Table/TableInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/TestingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/TestingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/TestDBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/TestDBConnection.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,12 +11,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Authenticator/AuthenticatorClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="87" column="19" lean-forward="true" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+            <state relative-caret-position="1139">
+              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1041#1042#0" expanded="true" />
@@ -59,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Utils/JwtUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="629">
               <caret line="43" column="40" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -71,8 +41,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Servlets/TestingServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+            <state relative-caret-position="306">
+              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Servlets/ServletLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,15 +63,359 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Servlets/ServletLogin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-645">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2514#2515#0" expanded="true" />
-                <element signature="e#2545#2546#0" expanded="true" />
-              </folding>
+        <entry file="uml://JAVA/">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="175.62116935483846" y="1891.5">Exceptions.LoginFailsException</node>
+                <node x="345.9349462365599" y="1441.5">Exceptions.AccountAlreadyExistsException</node>
+                <node x="924.0" y="2622.0">Tests.TestDBConnection</node>
+                <node x="1722.2724462365595" y="1059.0">Models.UserType</node>
+                <node x="1407.6474462365595" y="1025.5">DataBase.Connection.DBConnection</node>
+                <node x="1424.6849462365599" y="1408.0">Utils.Hash</node>
+                <node x="1103.763776881721" y="1693.0">DataBase.AccountsTableClass</node>
+                <node x="347.62116935483846" y="1891.5">Exceptions.PasswordDoesNotMatchException</node>
+                <node x="2158.6003360215054" y="1814.5">Authenticator.AuthenticatorInterface</node>
+                <node x="0.0" y="1441.5">Exceptions.AccountDoesNotExistsException</node>
+                <node x="982.9349462365599" y="1036.5">DataBase.Table.AttributeClass</node>
+                <node x="1931.9766129032266" y="716.0">Utils.JwtUtil</node>
+                <node x="1920.605779569893" y="1015.0">Models.Account</node>
+                <node x="1633.1458333333335" y="2219.0">Authenticator.AuthenticatorClass</node>
+                <node x="1075.168279569893" y="0.0">DataBase.Table.AttributeTypeEnum</node>
+                <node x="1205.6474462365595" y="771.5">DataBase.Table.AttributeInterface</node>
+                <node x="1696.0224462365595" y="1353.5">DataBase.AccountsTableInterface</node>
+                <node x="993.3711693548385" y="1309.0">DataBase.Table.TableClass</node>
+                <node x="578.9349462365599" y="982.0">DataBase.Table.TableInterface</node>
+                <node x="2297.0208333333335" y="2581.0">Servlets.TestingServlet</node>
+                <node x="1638.1458333333337" y="2559.0">Servlets.ServletLogin</node>
+                <node x="74.08333333333348" y="2559.0">Servlets.ServletCreateAccount</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="DataBase.Table.TableInterface" target="DataBase.Table.TableClass">
+                  <point x="128.0" y="113.5" />
+                  <point x="898.9349462365599" y="1279.0" />
+                  <point x="1065.3711693548385" y="1279.0" />
+                  <point x="-120.0" y="-147.0" />
+                </edge>
+                <edge source="DataBase.Table.TableClass" target="DataBase.Connection.DBConnection">
+                  <point x="168.0" y="-147.0" />
+                  <point x="1353.3711693548385" y="1249.0" />
+                  <point x="1507.6474462365595" y="1249.0" />
+                  <point x="0.0" y="70.0" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="Authenticator.AuthenticatorInterface">
+                  <point x="165.5999999999998" y="-125.0" />
+                  <point x="1982.7458333333334" y="2199.0" />
+                  <point x="2204.6003360215054" y="2199.0" />
+                  <point x="-138.0" y="91.5" />
+                </edge>
+                <edge source="DataBase.Table.TableClass" target="DataBase.Table.TableInterface">
+                  <point x="-168.0" y="-147.0" />
+                  <point x="1017.3711693548385" y="1289.0" />
+                  <point x="770.9349462365599" y="1289.0" />
+                  <point x="0.0" y="113.5" />
+                </edge>
+                <edge source="DataBase.Table.AttributeClass" target="DataBase.Table.AttributeTypeEnum">
+                  <point x="0.0" y="-59.0" />
+                  <point x="1073.4349462365599" y="696.0" />
+                  <point x="1166.751612903226" y="696.0" />
+                  <point x="13.083333333333258" y="323.0" />
+                </edge>
+                <edge source="Servlets.ServletLogin" target="Exceptions.AccountDoesNotExistsException">
+                  <point x="-143.20000000000016" y="-70.0" />
+                  <point x="1673.9458333333334" y="2499.0" />
+                  <point x="165.12116935483846" y="2499.0" />
+                  <point x="165.12116935483846" y="1663.0" />
+                  <point x="109.5" y="1663.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="Models.Account">
+                  <point x="74.25" y="-213.0" />
+                  <point x="1326.513776881721" y="1653.0" />
+                  <point x="1414.1849462365599" y="1653.0" />
+                  <point x="1414.1849462365599" y="1279.0" />
+                  <point x="1960.855779569893" y="1279.0" />
+                  <point x="-40.25" y="80.5" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="DataBase.Table.TableClass">
+                  <point x="-14.849999999999909" y="-213.0" />
+                  <point x="1237.413776881721" y="1623.0" />
+                  <point x="1185.3711693548385" y="1623.0" />
+                  <point x="0.0" y="147.0" />
+                </edge>
+                <edge source="DataBase.Table.AttributeClass" target="DataBase.Table.AttributeInterface">
+                  <point x="60.33333333333326" y="-59.0" />
+                  <point x="1133.7682795698931" y="942.0" />
+                  <point x="1228.2724462365595" y="942.0" />
+                  <point x="-67.875" y="47.5" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorInterface" target="Models.Account">
+                  <point x="0.0" y="-91.5" />
+                  <point x="2342.6003360215054" y="1279.0" />
+                  <point x="2041.355779569893" y="1279.0" />
+                  <point x="40.25" y="80.5" />
+                </edge>
+                <edge source="Servlets.ServletCreateAccount" target="Exceptions.LoginFailsException">
+                  <point x="-29.833333333333258" y="-70.0" />
+                  <point x="223.25000000000023" y="2539.0" />
+                  <point x="260.2099462365595" y="2539.0" />
+                  <point x="260.2099462365595" y="2199.0" />
+                  <point x="200.95450268817171" y="2199.0" />
+                  <point x="-50.66666666666674" y="14.5" />
+                </edge>
+                <edge source="Servlets.ServletCreateAccount" target="Exceptions.AccountDoesNotExistsException">
+                  <point x="-149.16666666666652" y="-70.0" />
+                  <point x="103.91666666666697" y="2539.0" />
+                  <point x="7.934946236559881" y="2539.0" />
+                  <point x="7.934946236559881" y="1663.0" />
+                  <point x="36.5" y="1663.0" />
+                  <point x="-73.0" y="14.5" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="Utils.Hash">
+                  <point x="-18.400000000000205" y="-125.0" />
+                  <point x="1798.7458333333334" y="2139.0" />
+                  <point x="1571.6849462365599" y="2139.0" />
+                  <point x="49.0" y="48.0" />
+                </edge>
+                <edge source="DataBase.Table.TableClass" target="DataBase.Table.AttributeTypeEnum">
+                  <point x="120.0" y="-147.0" />
+                  <point x="1305.3711693548385" y="1239.0" />
+                  <point x="1397.1474462365595" y="1239.0" />
+                  <point x="1397.1474462365595" y="686.0" />
+                  <point x="1219.0849462365595" y="686.0" />
+                  <point x="65.41666666666674" y="323.0" />
+                </edge>
+                <edge source="DataBase.Table.AttributeInterface" target="DataBase.Table.AttributeTypeEnum">
+                  <point x="0.0" y="-47.5" />
+                  <point x="1296.1474462365595" y="696.0" />
+                  <point x="1192.918279569893" y="696.0" />
+                  <point x="39.25" y="323.0" />
+                </edge>
+                <edge source="Servlets.TestingServlet" target="Authenticator.AuthenticatorClass">
+                  <point x="-88.5" y="-48.0" />
+                  <point x="2385.5208333333335" y="2509.0" />
+                  <point x="1939.8125000000002" y="2509.0" />
+                  <point x="122.66666666666663" y="125.0" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="Models.Account">
+                  <point x="91.99999999999989" y="-125.0" />
+                  <point x="1909.1458333333335" y="2179.0" />
+                  <point x="2070.5170026881715" y="2179.0" />
+                  <point x="2070.5170026881715" y="1289.0" />
+                  <point x="2014.5224462365595" y="1289.0" />
+                  <point x="13.416666666666629" y="80.5" />
+                </edge>
+                <edge source="Servlets.ServletCreateAccount" target="Exceptions.AccountAlreadyExistsException">
+                  <point x="-89.5" y="-70.0" />
+                  <point x="163.58333333333348" y="2529.0" />
+                  <point x="18.93494623655988" y="2529.0" />
+                  <point x="18.93494623655988" y="1673.0" />
+                  <point x="381.26827956989314" y="1673.0" />
+                  <point x="-70.66666666666674" y="14.5" />
+                </edge>
+                <edge source="Servlets.ServletLogin" target="Exceptions.LoginFailsException">
+                  <point x="-71.60000000000014" y="-70.0" />
+                  <point x="1745.5458333333336" y="2489.0" />
+                  <point x="476.4416666666664" y="2489.0" />
+                  <point x="476.4416666666664" y="2189.0" />
+                  <point x="251.62116935483846" y="2189.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="Servlets.ServletCreateAccount" target="Exceptions.PasswordDoesNotMatchException">
+                  <point x="29.833333333333258" y="-70.0" />
+                  <point x="282.91666666666674" y="2539.0" />
+                  <point x="271.2099462365595" y="2539.0" />
+                  <point x="271.2099462365595" y="2199.0" />
+                  <point x="404.87116935483846" y="2199.0" />
+                  <point x="-57.25" y="14.5" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="DataBase.Table.AttributeTypeEnum">
+                  <point x="-74.25" y="-213.0" />
+                  <point x="1178.013776881721" y="1643.0" />
+                  <point x="568.4349462365599" y="1643.0" />
+                  <point x="568.4349462365599" y="666.0" />
+                  <point x="1088.251612903226" y="666.0" />
+                  <point x="-65.41666666666674" y="323.0" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="Exceptions.AccountDoesNotExistsException">
+                  <point x="-133.64999999999986" y="-213.0" />
+                  <point x="1118.6137768817212" y="1663.0" />
+                  <point x="182.5" y="1663.0" />
+                  <point x="73.0" y="14.5" />
+                </edge>
+                <edge source="Servlets.TestingServlet" target="Authenticator.AuthenticatorInterface">
+                  <point x="88.5" y="-48.0" />
+                  <point x="2562.5208333333335" y="2199.0" />
+                  <point x="2480.6003360215054" y="2199.0" />
+                  <point x="138.0" y="91.5" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="DataBase.AccountsTableInterface">
+                  <point x="133.6500000000001" y="-213.0" />
+                  <point x="1385.913776881721" y="1673.0" />
+                  <point x="1770.2724462365595" y="1673.0" />
+                  <point x="-74.25" y="102.5" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="DataBase.AccountsTableClass">
+                  <point x="-55.20000000000016" y="-125.0" />
+                  <point x="1761.9458333333334" y="2149.0" />
+                  <point x="1252.263776881721" y="2149.0" />
+                  <point x="0.0" y="213.0" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="Models.UserType">
+                  <point x="14.849999999999909" y="-213.0" />
+                  <point x="1267.113776881721" y="1633.0" />
+                  <point x="1392.1849462365599" y="1633.0" />
+                  <point x="1392.1849462365599" y="1259.0" />
+                  <point x="1738.2724462365595" y="1259.0" />
+                  <point x="-32.0" y="36.5" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="Models.UserType">
+                  <point x="55.19999999999993" y="-125.0" />
+                  <point x="1872.3458333333335" y="2169.0" />
+                  <point x="2003.5224462365595" y="2169.0" />
+                  <point x="2003.5224462365595" y="1259.0" />
+                  <point x="1802.2724462365595" y="1259.0" />
+                  <point x="32.0" y="36.5" />
+                </edge>
+                <edge source="DataBase.Table.TableInterface" target="DataBase.Table.AttributeTypeEnum">
+                  <point x="0.0" y="-113.5" />
+                  <point x="770.9349462365599" y="676.0" />
+                  <point x="1114.418279569893" y="676.0" />
+                  <point x="-39.25" y="323.0" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="Exceptions.AccountAlreadyExistsException">
+                  <point x="-92.00000000000011" y="-125.0" />
+                  <point x="1725.1458333333335" y="2159.0" />
+                  <point x="587.1211693548385" y="2159.0" />
+                  <point x="587.1211693548385" y="1673.0" />
+                  <point x="451.9349462365599" y="1673.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="Exceptions.PasswordDoesNotMatchException">
+                  <point x="-128.80000000000018" y="-125.0" />
+                  <point x="1688.3458333333333" y="2169.0" />
+                  <point x="519.3711693548385" y="2169.0" />
+                  <point x="57.25" y="14.5" />
+                </edge>
+                <edge source="Servlets.ServletCreateAccount" target="Authenticator.AuthenticatorClass">
+                  <point x="89.5" y="-70.0" />
+                  <point x="342.5833333333335" y="2509.0" />
+                  <point x="1694.479166666667" y="2509.0" />
+                  <point x="-122.66666666666663" y="125.0" />
+                </edge>
+                <edge source="Servlets.ServletLogin" target="Authenticator.AuthenticatorClass">
+                  <point x="-1.1368683772161603E-13" y="-70.0" />
+                  <point x="0.0" y="125.0" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="DataBase.AccountsTableInterface">
+                  <point x="18.399999999999864" y="-125.0" />
+                  <point x="1835.5458333333336" y="2159.0" />
+                  <point x="1918.7724462365595" y="2159.0" />
+                  <point x="74.25" y="102.5" />
+                </edge>
+                <edge source="Servlets.ServletLogin" target="Authenticator.AuthenticatorInterface">
+                  <point x="71.59999999999997" y="-70.0" />
+                  <point x="1888.7458333333336" y="2529.0" />
+                  <point x="2330.892943548388" y="2529.0" />
+                  <point x="2330.892943548388" y="2199.0" />
+                  <point x="2388.6003360215054" y="2199.0" />
+                  <point x="46.0" y="91.5" />
+                </edge>
+                <edge source="Servlets.ServletLogin" target="Models.Account">
+                  <point x="143.19999999999987" y="-70.0" />
+                  <point x="1960.3458333333335" y="2539.0" />
+                  <point x="2537.1003360215054" y="2539.0" />
+                  <point x="2537.1003360215054" y="1269.0" />
+                  <point x="2068.1891129032265" y="1269.0" />
+                  <point x="67.08333333333326" y="80.5" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="Exceptions.LoginFailsException">
+                  <point x="-165.60000000000025" y="-125.0" />
+                  <point x="1651.5458333333333" y="2179.0" />
+                  <point x="302.287836021505" y="2179.0" />
+                  <point x="50.666666666666515" y="14.5" />
+                </edge>
+                <edge source="Authenticator.AuthenticatorClass" target="Utils.JwtUtil">
+                  <point x="128.79999999999984" y="-125.0" />
+                  <point x="1945.9458333333334" y="2189.0" />
+                  <point x="2148.1003360215054" y="2189.0" />
+                  <point x="2148.1003360215054" y="962.0" />
+                  <point x="2096.226612903227" y="962.0" />
+                  <point x="54.75" y="103.0" />
+                </edge>
+                <edge source="Models.Account" target="Utils.JwtUtil">
+                  <point x="0.0" y="-80.5" />
+                  <point x="2001.105779569893" y="962.0" />
+                  <point x="1986.7266129032266" y="962.0" />
+                  <point x="-54.75" y="103.0" />
+                </edge>
+                <edge source="DataBase.AccountsTableInterface" target="Models.Account">
+                  <point x="74.25" y="-102.5" />
+                  <point x="1918.7724462365595" y="1289.0" />
+                  <point x="1987.6891129032263" y="1289.0" />
+                  <point x="-13.416666666666686" y="80.5" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="DataBase.Table.TableInterface">
+                  <point x="-44.549999999999955" y="-213.0" />
+                  <point x="1207.713776881721" y="1633.0" />
+                  <point x="746.3711693548385" y="1633.0" />
+                  <point x="746.3711693548385" y="1289.0" />
+                  <point x="642.9349462365599" y="1289.0" />
+                  <point x="-128.0" y="113.5" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="Exceptions.AccountAlreadyExistsException">
+                  <point x="-103.94999999999982" y="-213.0" />
+                  <point x="1148.3137768817212" y="1653.0" />
+                  <point x="522.6016129032266" y="1653.0" />
+                  <point x="70.66666666666674" y="14.5" />
+                </edge>
+                <edge source="DataBase.Table.TableClass" target="DataBase.Table.AttributeInterface">
+                  <point x="24.0" y="-147.0" />
+                  <point x="1209.3711693548385" y="1289.0" />
+                  <point x="1191.2474462365599" y="1289.0" />
+                  <point x="1191.2474462365599" y="962.0" />
+                  <point x="1318.7724462365595" y="962.0" />
+                  <point x="22.625" y="47.5" />
+                </edge>
+                <edge source="DataBase.Table.TableClass" target="DataBase.Table.AttributeClass">
+                  <point x="-72.0" y="-147.0" />
+                  <point x="1113.3711693548385" y="1289.0" />
+                  <point x="1073.4349462365599" y="1289.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="Servlets.ServletCreateAccount" target="Authenticator.AuthenticatorInterface">
+                  <point x="149.16666666666674" y="-70.0" />
+                  <point x="402.2500000000002" y="2519.0" />
+                  <point x="2306.8999999999996" y="2519.0" />
+                  <point x="2306.8999999999996" y="2199.0" />
+                  <point x="2296.6003360215054" y="2199.0" />
+                  <point x="-46.0" y="91.5" />
+                </edge>
+                <edge source="DataBase.AccountsTableInterface" target="Models.UserType">
+                  <point x="-74.25" y="-102.5" />
+                  <point x="0.0" y="36.5" />
+                </edge>
+                <edge source="DataBase.AccountsTableClass" target="Utils.Hash">
+                  <point x="103.95000000000005" y="-213.0" />
+                  <point x="1356.213776881721" y="1663.0" />
+                  <point x="1473.6849462365599" y="1663.0" />
+                  <point x="-49.0" y="48.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.1" x="1406.80303030303" y="253.86363636363592" />
+              <SelectedNodes>
+                <node>Tests.TestDBConnection</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Properties</Category>
+                <Category>Fields</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -97,12 +423,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Servlets/ServletCreateAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="153">
               <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2269#2270#0" expanded="true" />
-                <element signature="e#2300#2301#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,7 +511,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-1607" />
     <option name="y" value="95" />
     <option name="width" value="814" />
@@ -201,6 +525,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,45 +541,19 @@
             <path>
               <item name="SS-TP1" type="b2602c69:ProjectViewProjectNode" />
               <item name="SS-TP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Authenticator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SS-TP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SS-TP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SS-TP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SS-TP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SS-TP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SS-TP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SS-TP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SS-TP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586304096093" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586347410941" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/WEB-INF/lib/jackson-annotations-2.11.0.rc1.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -389,15 +688,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586260932686</updated>
-      <workItem from="1586260934876" duration="37500000" />
+      <workItem from="1586260934876" duration="37631000" />
+      <workItem from="1586346582439" duration="825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37500000" />
+    <option name="totallyTimeSpent" value="38456000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1608" y="87" width="1616" height="886" extended-state="6" />
+    <frame x="-1608" y="78" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" order="0" />
@@ -406,7 +706,7 @@
       <window_info id="Azure Explorer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.17994858" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.13239075" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="0" />
       <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="1" weight="0.32934928" />
@@ -421,7 +721,7 @@
       <window_info anchor="bottom" id="Application Servers" order="10" weight="0.11731844" />
       <window_info anchor="bottom" id="Message" order="11" />
       <window_info anchor="bottom" id="Find" order="12" weight="0.32934928" />
-      <window_info active="true" anchor="bottom" id="Run" order="13" visible="true" weight="0.38247013" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.38247013" />
       <window_info anchor="bottom" id="Debug" order="14" weight="0.50199205" />
       <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
@@ -451,20 +751,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/Utils/Types.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/Utils/Types/TypeClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataBase/Utils/Types.java" />
+    <entry file="file://$PROJECT_DIR$/src/DataBase/Utils/Types/TypeClass.java" />
     <entry file="file://$PROJECT_DIR$/src/Utils/Hash.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90">
@@ -482,58 +770,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBManager/DataBaseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBManager/DataBaseManagerInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/Exceptions/InvalidRowException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="32" />
-          <folding>
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#138#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBManager/Exceptions/AccountDoesNotExistException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/index.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/DBManager/DataBaseManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/DBManager/DataBaseManagerInterface.java" />
+    <entry file="file://$PROJECT_DIR$/src/DataBase/Exceptions/InvalidRowException.java" />
+    <entry file="file://$PROJECT_DIR$/src/DataBase/DBManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/DBManager/Exceptions/AccountDoesNotExistException.java" />
     <entry file="uml://JavaScript-modules-diagram/C:/Users/choch/Desktop/apache-tomcat-8.5.53/webapps/SS-TP1/src/DataBase">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -547,6 +789,7 @@
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
@@ -564,329 +807,8 @@
           <Categories>
             <Category>All</Category>
           </Categories>
-          <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="" y="">java.applet</node>
-            <node x="" y="">groovyjarjarantlr.LLkGrammarAnalyzer</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRParser</node>
-            <node x="" y="">javax.resource</node>
-            <node x="" y="">DataBase.Connection</node>
-            <node x="" y="">java.time</node>
-            <node x="" y="">org.xml</node>
-            <node x="" y="">sun.audio</node>
-            <node x="" y="">groovyjarjarantlr.PreservingFileWriter</node>
-            <node x="" y="">groovyjarjarantlr.MismatchedCharException</node>
-            <node x="" y="">groovyjarjarantlr.ASTFactory</node>
-            <node x="" y="">groovyjarjarantlr.ParserSharedInputState</node>
-            <node x="" y="">org.omg</node>
-            <node x="" y="">groovyjarjarcommonscli.TypeHandler</node>
-            <node x="" y="">javax.imageio</node>
-            <node x="" y="">Authenticator.AuthenticatorInterface</node>
-            <node x="" y="">javafx.concurrent</node>
-            <node x="" y="">groovyjarjarantlr.CommonToken</node>
-            <node x="" y="">groovy.test</node>
-            <node x="" y="">groovyjarjarantlr.PythonCodeGenerator</node>
-            <node x="" y="">groovyjarjarantlr.StringLiteralElement</node>
-            <node x="" y="">groovyjarjarantlr.InputBuffer</node>
-            <node x="" y="">groovyjarjarantlr.ASTIterator</node>
-            <node x="" y="">groovyjarjarantlr.ParseTree</node>
-            <node x="" y="">javafx.print</node>
-            <node x="" y="">groovyjarjarantlr.TokenStream</node>
-            <node x="" y="">groovyjarjarantlr.debug</node>
-            <node x="" y="">javafx.scene</node>
-            <node x="" y="">groovyjarjarantlr.SimpleTokenManager</node>
-            <node x="" y="">javax.transaction</node>
-            <node x="" y="">groovyjarjarantlr.ASTNULLType</node>
-            <node x="" y="">groovyjarjarantlr.SynPredBlock</node>
-            <node x="" y="">groovyjarjarantlr.CharScanner</node>
-            <node x="" y="">javax.xml</node>
-            <node x="" y="">javax.persistence</node>
-            <node x="" y="">groovyjarjarantlr.build</node>
-            <node x="" y="">groovyjarjarantlr.CharStreamIOException</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamRecognitionException</node>
-            <node x="" y="">sun.nio</node>
-            <node x="" y="">jdk.jfr</node>
-            <node x="" y="">groovyjarjarcommonscli.CommandLineParser</node>
-            <node x="" y="">groovyjarjarantlr.JavaCharFormatter</node>
-            <node x="" y="">sun.launcher</node>
-            <node x="" y="">org.jcp</node>
-            <node x="" y="">groovyjarjarcommonscli.PosixParser</node>
-            <node x="" y="">sun.text</node>
-            <node x="" y="">java.math</node>
-            <node x="" y="">Servlets.TestingServlet</node>
-            <node x="" y="">groovy.swing</node>
-            <node x="" y="">groovy.beans</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRStringBuffer</node>
-            <node x="" y="">groovyjarjarantlr.actions</node>
-            <node x="" y="">sun.plugin2</node>
-            <node x="" y="">groovy.model</node>
-            <node x="" y="">groovyjarjarantlr.GrammarAtom</node>
-            <node x="" y="">java.awt</node>
-            <node x="" y="">javax.servlet</node>
-            <node x="" y="">java.text</node>
-            <node x="" y="">groovyjarjarantlr.RuleEndElement</node>
-            <node x="" y="">sun.applet</node>
-            <node x="" y="">javax.print</node>
-            <node x="" y="">jdk.internal</node>
-            <node x="" y="">groovyjarjarantlr.ToolErrorHandler</node>
-            <node x="" y="">groovyjarjarantlr.DefineGrammarSymbols</node>
-            <node x="" y="">sun.swing</node>
-            <node x="" y="">groovyjarjarantlr.TreeParserSharedInputState</node>
-            <node x="" y="">java.rmi</node>
-            <node x="" y="">groovyjarjarantlr.StringLiteralSymbol</node>
-            <node x="" y="">DataBase.Tables</node>
-            <node x="" y="">groovyjarjarantlr.ASdebug</node>
-            <node x="" y="">Models.UserType</node>
-            <node x="" y="">java.beans</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamIOException</node>
-            <node x="" y="">groovyjarjarantlr.DefaultToolErrorHandler</node>
-            <node x="" y="">javax.sql</node>
-            <node x="" y="">org.codehaus</node>
-            <node x="" y="">groovyjarjarantlr.CharFormatter</node>
-            <node x="" y="">groovyjarjarantlr.Grammar</node>
-            <node x="" y="">groovyjarjarantlr.PythonCharFormatter</node>
-            <node x="" y="">groovy.json</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRError</node>
-            <node x="" y="">java.net</node>
-            <node x="" y="">javax.lang</node>
-            <node x="" y="">groovyjarjarantlr.TokenWithIndex</node>
-            <node x="" y="">groovyjarjarantlr.FileCopyException</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamRewriteEngine</node>
-            <node x="" y="">sun.misc</node>
-            <node x="" y="">groovyjarjarantlr.Token</node>
-            <node x="" y="">javafx.util</node>
-            <node x="" y="">groovyjarjarantlr.Version</node>
-            <node x="" y="">groovy.xml</node>
-            <node x="" y="">groovyjarjarantlr.TokenSymbol</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRTokdefParserTokenTypes</node>
-            <node x="" y="">Tests.TestDBConnection</node>
-            <node x="" y="">Utils.Hash</node>
-            <node x="" y="">com.oracle</node>
-            <node x="" y="">groovyjarjarantlr.collections</node>
-            <node x="" y="">groovyjarjarantlr.HTMLCodeGenerator</node>
-            <node x="" y="">javafx.application</node>
-            <node x="" y="">groovyjarjarcommonscli.MissingOptionException</node>
-            <node x="" y="">groovyjarjarcommonscli.OptionGroup</node>
-            <node x="" y="">javafx.fxml</node>
-            <node x="" y="">javax.net</node>
-            <node x="" y="">sun.plugin</node>
-            <node x="" y="">groovyjarjarcommonscli.MissingArgumentException</node>
-            <node x="" y="">org.apache</node>
-            <node x="" y="">jdk.Exported</node>
-            <node x="" y="">groovyjarjarantlr.AlternativeElement</node>
-            <node x="" y="">groovy.security</node>
-            <node x="" y="">groovy.io</node>
-            <node x="" y="">groovyjarjarantlr.LexerGrammar</node>
-            <node x="" y="">javax.smartcardio</node>
-            <node x="" y="">javax.jms</node>
-            <node x="" y="">groovy.transform</node>
-            <node x="" y="">javax.security</node>
-            <node x="" y="">javafx.animation</node>
-            <node x="" y="">groovyjarjarantlr.StringUtils</node>
-            <node x="" y="">groovyjarjarantlr.TreeBlockContext</node>
-            <node x="" y="">javax.rmi</node>
-            <node x="" y="">javax.naming</node>
-            <node x="" y="">groovyjarjarantlr.CSharpCodeGenerator</node>
-            <node x="" y="">groovyjarjarantlr.DiagnosticCodeGenerator</node>
-            <node x="" y="">groovy.servlet</node>
-            <node x="" y="">javafx.geometry</node>
-            <node x="" y="">com.sun</node>
-            <node x="" y="">groovyjarjarantlr.LLkAnalyzer</node>
-            <node x="" y="">groovyjarjarantlr.TreeElement</node>
-            <node x="" y="">groovyjarjarantlr.NameSpace</node>
-            <node x="" y="">javax.sound</node>
-            <node x="" y="">sun.io</node>
-            <node x="" y="">groovyjarjarantlr.ASTPair</node>
-            <node x="" y="">jdk.xml</node>
-            <node x="" y="">groovyjarjarantlr.CharBuffer</node>
-            <node x="" y="">groovyjarjarasm.asm</node>
-            <node x="" y="">groovyjarjarantlr.NoViableAltForCharException</node>
-            <node x="" y="">groovyjarjarantlr.ParserGrammar</node>
-            <node x="" y="">groovyjarjarantlr.ImportVocabTokenManager</node>
-            <node x="" y="">groovyjarjarantlr.BaseAST</node>
-            <node x="" y="">groovyjarjarantlr.CppCharFormatter</node>
-            <node x="" y="">groovy.time</node>
-            <node x="" y="">groovyjarjarcommonscli.OptionBuilder</node>
-            <node x="" y="">groovyjarjarantlr.Lookahead</node>
-            <node x="" y="">groovyjarjarantlr.CommonASTWithHiddenTokens</node>
-            <node x="" y="">sun.print</node>
-            <node x="" y="">groovyjarjarantlr.BlockWithImpliedExitPath</node>
-            <node x="" y="">groovyjarjarantlr.TreeWalkerGrammar</node>
-            <node x="" y="">javax.jnlp</node>
-            <node x="" y="">org.ietf</node>
-            <node x="" y="">javax.swing</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRHashString</node>
-            <node x="" y="">groovyjarjarantlr.BlockEndElement</node>
-            <node x="" y="">groovyjarjarantlr.CSharpNameSpace</node>
-            <node x="" y="">groovyjarjarantlr.ParseTreeToken</node>
-            <node x="" y="">java.nio</node>
-            <node x="" y="">groovyjarjarantlr.CommonAST</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamRetryException</node>
-            <node x="" y="">groovyjarjarantlr.ZeroOrMoreBlock</node>
-            <node x="" y="">groovyjarjarantlr.TokenRangeElement</node>
-            <node x="" y="">groovyjarjarcommonscli.HelpFormatter</node>
-            <node x="" y="">sun.tools</node>
-            <node x="" y="">oracle.jrockit</node>
-            <node x="" y="">groovyjarjarcommonscli.Options</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRTokdefParser</node>
-            <node x="" y="">groovyjarjarantlr.TokenManager</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamRewriteEngine.InsertBeforeOp</node>
-            <node x="" y="">groovyjarjarantlr.DocBookCodeGenerator</node>
-            <node x="" y="">javax.activation</node>
-            <node x="" y="">META-INF.services</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamHiddenTokenFilter</node>
-            <node x="" y="">groovyjarjarantlr.JavaBlockFinishingInfo</node>
-            <node x="" y="">java.security</node>
-            <node x="" y="">sun.java2d</node>
-            <node x="" y="">groovy.jmx</node>
-            <node x="" y="">org.w3c</node>
-            <node x="" y="">groovyjarjarantlr.CSharpBlockFinishingInfo</node>
-            <node x="" y="">groovyjarjarcommonscli.GroovyInternalPosixParser</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamRewriteEngine.ReplaceOp</node>
-            <node x="" y="">groovyjarjarantlr.RuleBlock</node>
-            <node x="" y="">groovyjarjarantlr.Utils</node>
-            <node x="" y="">groovy.inspect</node>
-            <node x="" y="">groovyjarjarantlr.CodeGenerator</node>
-            <node x="" y="">META-INF.licenses</node>
-            <node x="" y="">groovyjarjarantlr.TreeParser</node>
-            <node x="" y="">java.lang</node>
-            <node x="" y="">groovyjarjarantlr.GrammarSymbol</node>
-            <node x="" y="">groovy.mock</node>
-            <node x="" y="">groovyjarjarantlr.PrintWriterWithSMAP</node>
-            <node x="" y="">groovyjarjarcommonscli.AlreadySelectedException</node>
-            <node x="" y="">groovyjarjarantlr.CharQueue</node>
-            <node x="" y="">javafx.embed</node>
-            <node x="" y="">netscape.security</node>
-            <node x="" y="">groovyjarjarantlr.OneOrMoreBlock</node>
-            <node x="" y="">javax.crypto</node>
-            <node x="" y="">javax.interceptor</node>
-            <node x="" y="">java.sql</node>
-            <node x="" y="">groovyjarjarantlr.TokenQueue</node>
-            <node x="" y="">groovyjarjarantlr.FileLineFormatter</node>
-            <node x="" y="">groovyjarjarantlr.SemanticException</node>
-            <node x="" y="">java.util</node>
-            <node x="" y="">javafx.collections</node>
-            <node x="" y="">groovyjarjarantlr.ByteBuffer</node>
-            <node x="" y="">javafx.event</node>
-            <node x="" y="">groovyjarjarcommonscli.Option</node>
-            <node x="" y="">jdk.nashorn</node>
-            <node x="" y="">groovyjarjarcommonscli.ParseException</node>
-            <node x="" y="">groovyjarjarantlr.CharLiteralElement</node>
-            <node x="" y="">groovyjarjarantlr.WildcardElement</node>
-            <node x="" y="">groovy.text</node>
-            <node x="" y="">jdk.net</node>
-            <node x="" y="">groovyjarjarantlr.Tool</node>
-            <node x="" y="">groovyjarjarantlr.NoViableAltException</node>
-            <node x="" y="">groovyjarjarantlr.MismatchedTokenException</node>
-            <node x="" y="">groovyjarjarantlr.ActionElement</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamRewriteEngine.RewriteOperation</node>
-            <node x="" y="">groovyjarjarantlr.ActionTransInfo</node>
-            <node x="" y="">groovyjarjarcommonscli.CommandLine</node>
-            <node x="" y="">META-INF.maven</node>
-            <node x="" y="">groovyjarjarcommonscli.OptionValidator</node>
-            <node x="" y="">groovyjarjarcommonscli.BasicParser</node>
-            <node x="" y="">sun.security</node>
-            <node x="" y="">sun.awt</node>
-            <node x="" y="">groovyjarjarantlr.JavaCodeGenerator</node>
-            <node x="" y="">groovyjarjarantlr.BlockContext</node>
-            <node x="" y="">groovyjarjarantlr.CSharpCharFormatter</node>
-            <node x="" y="">javax.activity</node>
-            <node x="" y="">groovyjarjarantlr.RuleSymbol</node>
-            <node x="" y="">DataBase.Models</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamBasicFilter</node>
-            <node x="" y="">groovy.sql</node>
-            <node x="" y="">groovyjarjarantlr.JavaCodeGeneratorPrintWriterManager</node>
-            <node x="" y="">sun.font</node>
-            <node x="" y="">javafx.beans</node>
-            <node x="" y="">groovyjarjarantlr.ExceptionHandler</node>
-            <node x="" y="">sun.dc</node>
-            <node x="" y="">sun.management</node>
-            <node x="" y="">groovyjarjarantlr.GrammarAnalyzer</node>
-            <node x="" y="">groovyjarjarantlr.ASTVisitor</node>
-            <node x="" y="">sun.invoke</node>
-            <node x="" y="">groovyjarjarantlr.TokenBuffer</node>
-            <node x="" y="">javax.jws</node>
-            <node x="" y="">javax.annotation</node>
-            <node x="" y="">javax.accessibility</node>
-            <node x="" y="">javafx.css</node>
-            <node x="" y="">groovyjarjarantlr.PythonBlockFinishingInfo</node>
-            <node x="" y="">groovy.lang</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamSelector</node>
-            <node x="" y="">sun.corba</node>
-            <node x="" y="">groovyjarjarantlr.RuleRefElement</node>
-            <node x="" y="">groovyjarjarantlr.CommonHiddenStreamToken</node>
-            <node x="" y="">javax.el</node>
-            <node x="" y="">Utils.Log</node>
-            <node x="" y="">groovyjarjarantlr.ParseTreeRule</node>
-            <node x="" y="">org.sqlite</node>
-            <node x="" y="">groovyjarjarantlr.TokenRefElement</node>
-            <node x="" y="">sun.tracing</node>
-            <node x="" y="">javafx.stage</node>
-            <node x="" y="">groovyjarjarantlr.Alternative</node>
-            <node x="" y="">sun.util</node>
-            <node x="" y="">groovyjarjarcommonscli.HelpFormatter.OptionComparator</node>
-            <node x="" y="">groovyjarjarantlr.CppCodeGenerator</node>
-            <node x="" y="">groovyjarjarantlr.CharStreamException</node>
-            <node x="" y="">groovyjarjarantlr.DumpASTVisitor</node>
-            <node x="" y="">groovyjarjarantlr.MakeGrammar</node>
-            <node x="" y="">groovy.ui</node>
-            <node x="" y="">groovy.grape</node>
-            <node x="" y="">groovyjarjarcommonscli.GnuParser</node>
-            <node x="" y="">groovy.util</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRException</node>
-            <node x="" y="">groovyjarjarantlr.RecognitionException</node>
-            <node x="" y="">sun.reflect</node>
-            <node x="" y="">groovyjarjarantlr.preprocessor</node>
-            <node x="" y="">groovyjarjarantlr.LexerSharedInputState</node>
-            <node x="" y="">sun.net</node>
-            <node x="" y="">groovyjarjarantlr.Parser</node>
-            <node x="" y="">groovyjarjarantlr.AlternativeBlock</node>
-            <node x="" y="">groovyjarjarantlr.ExceptionSpec</node>
-            <node x="" y="">Models.Account</node>
-            <node x="" y="">groovyjarjarantlr.TreeSpecifierNode</node>
-            <node x="" y="">groovyjarjarantlr.CharRangeElement</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRGrammarParseBehavior</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRTokdefLexer</node>
-            <node x="" y="">sun.rmi</node>
-            <node x="" y="">sun.instrument</node>
-            <node x="" y="">groovyjarjarcommonscli.UnrecognizedOptionException</node>
-            <node x="" y="">groovyjarjarantlr.GrammarElement</node>
-            <node x="" y="">groovyjarjarantlr.DefaultJavaCodeGeneratorPrintWriterManager</node>
-            <node x="" y="">netscape.javascript</node>
-            <node x="" y="">groovyjarjarcommonscli.PatternOptionBuilder</node>
-            <node x="" y="">javax.management</node>
-            <node x="" y="">javax.tools</node>
-            <node x="" y="">Authenticator.AuthenticatorClass</node>
-            <node x="" y="">groovyjarjarantlr.DefaultFileLineFormatter</node>
-            <node x="" y="">javax.script</node>
-            <node x="" y="">groovyjarjarantlr.LLkParser</node>
-            <node x="" y="">jdk.management</node>
-            <node x="" y="">java.io</node>
-            <node x="" y="">groovyjarjarcommonscli.Parser</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRTokenTypes</node>
-            <node x="" y="">groovyjarjarcommonscli.Util</node>
-            <node x="" y="">javax.ejb</node>
-            <node x="" y="">groovyjarjarantlr.ANTLRLexer</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamException</node>
-            <node x="" y="">groovyjarjarantlr.CppBlockFinishingInfo</node>
-            <node x="" y="">groovyjarjarantlr.TokenStreamRewriteEngine.DeleteOp</node>
-            <node x="" y="">sun.usagetracker</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.1" x="3287.1832611832624" y="2935.727272727274" />
-          <SelectedNodes />
-          <Categories />
           <SCOPE>All</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
+          <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -906,7 +828,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="69.5" y="91.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="70.0" y="91.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -914,20 +836,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/Table/AttributeClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase2/Models/TableInterface2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataBase2/Models/TableInterface2.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -935,36 +844,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase2/Models/Table2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase2/Tables/AccountsTableClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase2/Tables/AccountsTableInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataBase2/Models/Table2.java" />
+    <entry file="file://$PROJECT_DIR$/src/DataBase2/Tables/AccountsTableClass.java" />
+    <entry file="file://$PROJECT_DIR$/src/DataBase2/Tables/AccountsTableInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/DataBase/Table/AttributeInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1069,17 +951,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Authenticator/ola.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="e#128#129#0" expanded="true" />
-            <element signature="e#162#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Authenticator/ola.java" />
     <entry file="file://$PROJECT_DIR$/src/DataBase/Connection/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -1127,8 +999,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Authenticator/AuthenticatorClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="87" column="19" lean-forward="true" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+        <state relative-caret-position="1139">
+          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1041#1042#0" expanded="true" />
@@ -1137,10 +1009,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/JwtUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/TestingServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="306">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1149,20 +1031,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/ServletCreateAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="153">
           <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2269#2270#0" expanded="true" />
-            <element signature="e#2300#2301#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/JwtUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1171,13 +1041,367 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/ServletLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="468">
+          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2545#2546#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="175.62116935483846" y="1891.5">Exceptions.LoginFailsException</node>
+            <node x="345.9349462365599" y="1441.5">Exceptions.AccountAlreadyExistsException</node>
+            <node x="924.0" y="2622.0">Tests.TestDBConnection</node>
+            <node x="1722.2724462365595" y="1059.0">Models.UserType</node>
+            <node x="1407.6474462365595" y="1025.5">DataBase.Connection.DBConnection</node>
+            <node x="1424.6849462365599" y="1408.0">Utils.Hash</node>
+            <node x="1103.763776881721" y="1693.0">DataBase.AccountsTableClass</node>
+            <node x="347.62116935483846" y="1891.5">Exceptions.PasswordDoesNotMatchException</node>
+            <node x="2158.6003360215054" y="1814.5">Authenticator.AuthenticatorInterface</node>
+            <node x="0.0" y="1441.5">Exceptions.AccountDoesNotExistsException</node>
+            <node x="982.9349462365599" y="1036.5">DataBase.Table.AttributeClass</node>
+            <node x="1931.9766129032266" y="716.0">Utils.JwtUtil</node>
+            <node x="1920.605779569893" y="1015.0">Models.Account</node>
+            <node x="1633.1458333333335" y="2219.0">Authenticator.AuthenticatorClass</node>
+            <node x="1075.168279569893" y="0.0">DataBase.Table.AttributeTypeEnum</node>
+            <node x="1205.6474462365595" y="771.5">DataBase.Table.AttributeInterface</node>
+            <node x="1696.0224462365595" y="1353.5">DataBase.AccountsTableInterface</node>
+            <node x="993.3711693548385" y="1309.0">DataBase.Table.TableClass</node>
+            <node x="578.9349462365599" y="982.0">DataBase.Table.TableInterface</node>
+            <node x="2297.0208333333335" y="2581.0">Servlets.TestingServlet</node>
+            <node x="1638.1458333333337" y="2559.0">Servlets.ServletLogin</node>
+            <node x="74.08333333333348" y="2559.0">Servlets.ServletCreateAccount</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="DataBase.Table.TableInterface" target="DataBase.Table.TableClass">
+              <point x="128.0" y="113.5" />
+              <point x="898.9349462365599" y="1279.0" />
+              <point x="1065.3711693548385" y="1279.0" />
+              <point x="-120.0" y="-147.0" />
+            </edge>
+            <edge source="DataBase.Table.TableClass" target="DataBase.Connection.DBConnection">
+              <point x="168.0" y="-147.0" />
+              <point x="1353.3711693548385" y="1249.0" />
+              <point x="1507.6474462365595" y="1249.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="Authenticator.AuthenticatorInterface">
+              <point x="165.5999999999998" y="-125.0" />
+              <point x="1982.7458333333334" y="2199.0" />
+              <point x="2204.6003360215054" y="2199.0" />
+              <point x="-138.0" y="91.5" />
+            </edge>
+            <edge source="DataBase.Table.TableClass" target="DataBase.Table.TableInterface">
+              <point x="-168.0" y="-147.0" />
+              <point x="1017.3711693548385" y="1289.0" />
+              <point x="770.9349462365599" y="1289.0" />
+              <point x="0.0" y="113.5" />
+            </edge>
+            <edge source="DataBase.Table.AttributeClass" target="DataBase.Table.AttributeTypeEnum">
+              <point x="0.0" y="-59.0" />
+              <point x="1073.4349462365599" y="696.0" />
+              <point x="1166.751612903226" y="696.0" />
+              <point x="13.083333333333258" y="323.0" />
+            </edge>
+            <edge source="Servlets.ServletLogin" target="Exceptions.AccountDoesNotExistsException">
+              <point x="-143.20000000000016" y="-70.0" />
+              <point x="1673.9458333333334" y="2499.0" />
+              <point x="165.12116935483846" y="2499.0" />
+              <point x="165.12116935483846" y="1663.0" />
+              <point x="109.5" y="1663.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="Models.Account">
+              <point x="74.25" y="-213.0" />
+              <point x="1326.513776881721" y="1653.0" />
+              <point x="1414.1849462365599" y="1653.0" />
+              <point x="1414.1849462365599" y="1279.0" />
+              <point x="1960.855779569893" y="1279.0" />
+              <point x="-40.25" y="80.5" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="DataBase.Table.TableClass">
+              <point x="-14.849999999999909" y="-213.0" />
+              <point x="1237.413776881721" y="1623.0" />
+              <point x="1185.3711693548385" y="1623.0" />
+              <point x="0.0" y="147.0" />
+            </edge>
+            <edge source="DataBase.Table.AttributeClass" target="DataBase.Table.AttributeInterface">
+              <point x="60.33333333333326" y="-59.0" />
+              <point x="1133.7682795698931" y="942.0" />
+              <point x="1228.2724462365595" y="942.0" />
+              <point x="-67.875" y="47.5" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorInterface" target="Models.Account">
+              <point x="0.0" y="-91.5" />
+              <point x="2342.6003360215054" y="1279.0" />
+              <point x="2041.355779569893" y="1279.0" />
+              <point x="40.25" y="80.5" />
+            </edge>
+            <edge source="Servlets.ServletCreateAccount" target="Exceptions.LoginFailsException">
+              <point x="-29.833333333333258" y="-70.0" />
+              <point x="223.25000000000023" y="2539.0" />
+              <point x="260.2099462365595" y="2539.0" />
+              <point x="260.2099462365595" y="2199.0" />
+              <point x="200.95450268817171" y="2199.0" />
+              <point x="-50.66666666666674" y="14.5" />
+            </edge>
+            <edge source="Servlets.ServletCreateAccount" target="Exceptions.AccountDoesNotExistsException">
+              <point x="-149.16666666666652" y="-70.0" />
+              <point x="103.91666666666697" y="2539.0" />
+              <point x="7.934946236559881" y="2539.0" />
+              <point x="7.934946236559881" y="1663.0" />
+              <point x="36.5" y="1663.0" />
+              <point x="-73.0" y="14.5" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="Utils.Hash">
+              <point x="-18.400000000000205" y="-125.0" />
+              <point x="1798.7458333333334" y="2139.0" />
+              <point x="1571.6849462365599" y="2139.0" />
+              <point x="49.0" y="48.0" />
+            </edge>
+            <edge source="DataBase.Table.TableClass" target="DataBase.Table.AttributeTypeEnum">
+              <point x="120.0" y="-147.0" />
+              <point x="1305.3711693548385" y="1239.0" />
+              <point x="1397.1474462365595" y="1239.0" />
+              <point x="1397.1474462365595" y="686.0" />
+              <point x="1219.0849462365595" y="686.0" />
+              <point x="65.41666666666674" y="323.0" />
+            </edge>
+            <edge source="DataBase.Table.AttributeInterface" target="DataBase.Table.AttributeTypeEnum">
+              <point x="0.0" y="-47.5" />
+              <point x="1296.1474462365595" y="696.0" />
+              <point x="1192.918279569893" y="696.0" />
+              <point x="39.25" y="323.0" />
+            </edge>
+            <edge source="Servlets.TestingServlet" target="Authenticator.AuthenticatorClass">
+              <point x="-88.5" y="-48.0" />
+              <point x="2385.5208333333335" y="2509.0" />
+              <point x="1939.8125000000002" y="2509.0" />
+              <point x="122.66666666666663" y="125.0" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="Models.Account">
+              <point x="91.99999999999989" y="-125.0" />
+              <point x="1909.1458333333335" y="2179.0" />
+              <point x="2070.5170026881715" y="2179.0" />
+              <point x="2070.5170026881715" y="1289.0" />
+              <point x="2014.5224462365595" y="1289.0" />
+              <point x="13.416666666666629" y="80.5" />
+            </edge>
+            <edge source="Servlets.ServletCreateAccount" target="Exceptions.AccountAlreadyExistsException">
+              <point x="-89.5" y="-70.0" />
+              <point x="163.58333333333348" y="2529.0" />
+              <point x="18.93494623655988" y="2529.0" />
+              <point x="18.93494623655988" y="1673.0" />
+              <point x="381.26827956989314" y="1673.0" />
+              <point x="-70.66666666666674" y="14.5" />
+            </edge>
+            <edge source="Servlets.ServletLogin" target="Exceptions.LoginFailsException">
+              <point x="-71.60000000000014" y="-70.0" />
+              <point x="1745.5458333333336" y="2489.0" />
+              <point x="476.4416666666664" y="2489.0" />
+              <point x="476.4416666666664" y="2189.0" />
+              <point x="251.62116935483846" y="2189.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Servlets.ServletCreateAccount" target="Exceptions.PasswordDoesNotMatchException">
+              <point x="29.833333333333258" y="-70.0" />
+              <point x="282.91666666666674" y="2539.0" />
+              <point x="271.2099462365595" y="2539.0" />
+              <point x="271.2099462365595" y="2199.0" />
+              <point x="404.87116935483846" y="2199.0" />
+              <point x="-57.25" y="14.5" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="DataBase.Table.AttributeTypeEnum">
+              <point x="-74.25" y="-213.0" />
+              <point x="1178.013776881721" y="1643.0" />
+              <point x="568.4349462365599" y="1643.0" />
+              <point x="568.4349462365599" y="666.0" />
+              <point x="1088.251612903226" y="666.0" />
+              <point x="-65.41666666666674" y="323.0" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="Exceptions.AccountDoesNotExistsException">
+              <point x="-133.64999999999986" y="-213.0" />
+              <point x="1118.6137768817212" y="1663.0" />
+              <point x="182.5" y="1663.0" />
+              <point x="73.0" y="14.5" />
+            </edge>
+            <edge source="Servlets.TestingServlet" target="Authenticator.AuthenticatorInterface">
+              <point x="88.5" y="-48.0" />
+              <point x="2562.5208333333335" y="2199.0" />
+              <point x="2480.6003360215054" y="2199.0" />
+              <point x="138.0" y="91.5" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="DataBase.AccountsTableInterface">
+              <point x="133.6500000000001" y="-213.0" />
+              <point x="1385.913776881721" y="1673.0" />
+              <point x="1770.2724462365595" y="1673.0" />
+              <point x="-74.25" y="102.5" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="DataBase.AccountsTableClass">
+              <point x="-55.20000000000016" y="-125.0" />
+              <point x="1761.9458333333334" y="2149.0" />
+              <point x="1252.263776881721" y="2149.0" />
+              <point x="0.0" y="213.0" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="Models.UserType">
+              <point x="14.849999999999909" y="-213.0" />
+              <point x="1267.113776881721" y="1633.0" />
+              <point x="1392.1849462365599" y="1633.0" />
+              <point x="1392.1849462365599" y="1259.0" />
+              <point x="1738.2724462365595" y="1259.0" />
+              <point x="-32.0" y="36.5" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="Models.UserType">
+              <point x="55.19999999999993" y="-125.0" />
+              <point x="1872.3458333333335" y="2169.0" />
+              <point x="2003.5224462365595" y="2169.0" />
+              <point x="2003.5224462365595" y="1259.0" />
+              <point x="1802.2724462365595" y="1259.0" />
+              <point x="32.0" y="36.5" />
+            </edge>
+            <edge source="DataBase.Table.TableInterface" target="DataBase.Table.AttributeTypeEnum">
+              <point x="0.0" y="-113.5" />
+              <point x="770.9349462365599" y="676.0" />
+              <point x="1114.418279569893" y="676.0" />
+              <point x="-39.25" y="323.0" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="Exceptions.AccountAlreadyExistsException">
+              <point x="-92.00000000000011" y="-125.0" />
+              <point x="1725.1458333333335" y="2159.0" />
+              <point x="587.1211693548385" y="2159.0" />
+              <point x="587.1211693548385" y="1673.0" />
+              <point x="451.9349462365599" y="1673.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="Exceptions.PasswordDoesNotMatchException">
+              <point x="-128.80000000000018" y="-125.0" />
+              <point x="1688.3458333333333" y="2169.0" />
+              <point x="519.3711693548385" y="2169.0" />
+              <point x="57.25" y="14.5" />
+            </edge>
+            <edge source="Servlets.ServletCreateAccount" target="Authenticator.AuthenticatorClass">
+              <point x="89.5" y="-70.0" />
+              <point x="342.5833333333335" y="2509.0" />
+              <point x="1694.479166666667" y="2509.0" />
+              <point x="-122.66666666666663" y="125.0" />
+            </edge>
+            <edge source="Servlets.ServletLogin" target="Authenticator.AuthenticatorClass">
+              <point x="-1.1368683772161603E-13" y="-70.0" />
+              <point x="0.0" y="125.0" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="DataBase.AccountsTableInterface">
+              <point x="18.399999999999864" y="-125.0" />
+              <point x="1835.5458333333336" y="2159.0" />
+              <point x="1918.7724462365595" y="2159.0" />
+              <point x="74.25" y="102.5" />
+            </edge>
+            <edge source="Servlets.ServletLogin" target="Authenticator.AuthenticatorInterface">
+              <point x="71.59999999999997" y="-70.0" />
+              <point x="1888.7458333333336" y="2529.0" />
+              <point x="2330.892943548388" y="2529.0" />
+              <point x="2330.892943548388" y="2199.0" />
+              <point x="2388.6003360215054" y="2199.0" />
+              <point x="46.0" y="91.5" />
+            </edge>
+            <edge source="Servlets.ServletLogin" target="Models.Account">
+              <point x="143.19999999999987" y="-70.0" />
+              <point x="1960.3458333333335" y="2539.0" />
+              <point x="2537.1003360215054" y="2539.0" />
+              <point x="2537.1003360215054" y="1269.0" />
+              <point x="2068.1891129032265" y="1269.0" />
+              <point x="67.08333333333326" y="80.5" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="Exceptions.LoginFailsException">
+              <point x="-165.60000000000025" y="-125.0" />
+              <point x="1651.5458333333333" y="2179.0" />
+              <point x="302.287836021505" y="2179.0" />
+              <point x="50.666666666666515" y="14.5" />
+            </edge>
+            <edge source="Authenticator.AuthenticatorClass" target="Utils.JwtUtil">
+              <point x="128.79999999999984" y="-125.0" />
+              <point x="1945.9458333333334" y="2189.0" />
+              <point x="2148.1003360215054" y="2189.0" />
+              <point x="2148.1003360215054" y="962.0" />
+              <point x="2096.226612903227" y="962.0" />
+              <point x="54.75" y="103.0" />
+            </edge>
+            <edge source="Models.Account" target="Utils.JwtUtil">
+              <point x="0.0" y="-80.5" />
+              <point x="2001.105779569893" y="962.0" />
+              <point x="1986.7266129032266" y="962.0" />
+              <point x="-54.75" y="103.0" />
+            </edge>
+            <edge source="DataBase.AccountsTableInterface" target="Models.Account">
+              <point x="74.25" y="-102.5" />
+              <point x="1918.7724462365595" y="1289.0" />
+              <point x="1987.6891129032263" y="1289.0" />
+              <point x="-13.416666666666686" y="80.5" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="DataBase.Table.TableInterface">
+              <point x="-44.549999999999955" y="-213.0" />
+              <point x="1207.713776881721" y="1633.0" />
+              <point x="746.3711693548385" y="1633.0" />
+              <point x="746.3711693548385" y="1289.0" />
+              <point x="642.9349462365599" y="1289.0" />
+              <point x="-128.0" y="113.5" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="Exceptions.AccountAlreadyExistsException">
+              <point x="-103.94999999999982" y="-213.0" />
+              <point x="1148.3137768817212" y="1653.0" />
+              <point x="522.6016129032266" y="1653.0" />
+              <point x="70.66666666666674" y="14.5" />
+            </edge>
+            <edge source="DataBase.Table.TableClass" target="DataBase.Table.AttributeInterface">
+              <point x="24.0" y="-147.0" />
+              <point x="1209.3711693548385" y="1289.0" />
+              <point x="1191.2474462365599" y="1289.0" />
+              <point x="1191.2474462365599" y="962.0" />
+              <point x="1318.7724462365595" y="962.0" />
+              <point x="22.625" y="47.5" />
+            </edge>
+            <edge source="DataBase.Table.TableClass" target="DataBase.Table.AttributeClass">
+              <point x="-72.0" y="-147.0" />
+              <point x="1113.3711693548385" y="1289.0" />
+              <point x="1073.4349462365599" y="1289.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="Servlets.ServletCreateAccount" target="Authenticator.AuthenticatorInterface">
+              <point x="149.16666666666674" y="-70.0" />
+              <point x="402.2500000000002" y="2519.0" />
+              <point x="2306.8999999999996" y="2519.0" />
+              <point x="2306.8999999999996" y="2199.0" />
+              <point x="2296.6003360215054" y="2199.0" />
+              <point x="-46.0" y="91.5" />
+            </edge>
+            <edge source="DataBase.AccountsTableInterface" target="Models.UserType">
+              <point x="-74.25" y="-102.5" />
+              <point x="0.0" y="36.5" />
+            </edge>
+            <edge source="DataBase.AccountsTableClass" target="Utils.Hash">
+              <point x="103.95000000000005" y="-213.0" />
+              <point x="1356.213776881721" y="1663.0" />
+              <point x="1473.6849462365599" y="1663.0" />
+              <point x="-49.0" y="48.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.1" x="1406.80303030303" y="253.86363636363592" />
+          <SelectedNodes>
+            <node>Tests.TestDBConnection</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Properties</Category>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
