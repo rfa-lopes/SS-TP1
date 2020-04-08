@@ -4,6 +4,7 @@ import DataBase.Connection.DBConnection;
 import Utils.Log;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
@@ -93,10 +94,19 @@ public class TableClass implements TableInterface{
     @Override
     public void update(String primKey, String UpdateCol, String UpdateValue) throws SQLException {
         Connection conn = DBConnection.getInstance();
-        String query = "UPDATE " + tableName + " SET "+UpdateCol+ "= '"+UpdateValue+"' WHERE "+primaryKeyAttribute+" LIKE '" + primKey+"'";
+        String query = "UPDATE " + tableName + " SET "+UpdateCol+ "= '"+UpdateValue+"' WHERE "+primaryKeyAttribute.getName()+" LIKE '" + primKey+"'";
         PreparedStatement sttm = conn.prepareStatement(query);
         sttm.executeUpdate();
         Log.info("Table update:   %s", primKey);
+    }
+
+    @Override
+    public ResultSet getOne(String primKey) throws SQLException {
+        Connection conn = DBConnection.getInstance();
+        String query = "SELECT * FROM " + tableName + " WHERE " + primaryKeyAttribute.getName() + " LIKE '" + primKey + "'";
+        PreparedStatement sttm = conn.prepareStatement(query);
+        Log.info("Table getOne:   %s", primKey);
+        return sttm.executeQuery();
     }
 
 }

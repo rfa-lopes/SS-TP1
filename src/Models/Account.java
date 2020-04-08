@@ -1,14 +1,20 @@
 package Models;
 
+import Utils.JwtUtil;
+
 public class Account {
 
     String username;
     String passwordhash;
     boolean isloggedin;
     boolean islocked;
-    UserType type;
+    String type;
 
     public Account() { }
+
+    public String getJwt() {
+        return JwtUtil.createJWT(username);
+    }
 
     public String getUsername() {
         return username;
@@ -42,11 +48,11 @@ public class Account {
         this.islocked = islocked;
     }
 
-    public UserType getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(UserType type) {
+    public void setType(String type) {
         this.type = type;
     }
 }

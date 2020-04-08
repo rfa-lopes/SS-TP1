@@ -1,5 +1,6 @@
 package DataBase.Table;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public interface TableInterface {
@@ -14,5 +15,6 @@ public interface TableInterface {
     void insert(String ... elems) throws SQLException;
     void remove(String primKey) throws SQLException;
     void update(String primKey, String UpdateCol, String UpdateValue) throws SQLException;
+    ResultSet getOne(String primKey) throws SQLException;
 
 }

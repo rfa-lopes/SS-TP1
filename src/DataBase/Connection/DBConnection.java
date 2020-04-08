@@ -14,10 +14,10 @@ public class DBConnection {
     public static final String DB_NAME = "database.db";
 
     /*Tomcat tests*/
-    //public static final String DB_PATH = "../webapps/SS-TP1/WEB-INF/";
+    public static final String DB_PATH = "../webapps/SS-TP1/WEB-INF/database/";
 
     /*Local tests*/
-    public static final String DB_PATH = "WEB-INF/database/";
+    //public static final String DB_PATH = "WEB-INF/database/";
 
     private static Connection conn;
 
@@ -27,8 +27,10 @@ public class DBConnection {
                 File db = new File(DB_PATH + DB_NAME);
                 if (db.createNewFile())
                     Log.warn("Creating new data base file in: %s", DB_PATH + DB_NAME);
+                Class.forName("org.sqlite.JDBC");
                 conn = DriverManager.getConnection(DB_CONN + DB_PATH + DB_NAME);
-            } catch (SQLException | IOException e) {
+            } catch (SQLException | IOException | ClassNotFoundException e) {
+                e.printStackTrace();
                 Log.error("Data base connection fail.");
                 System.exit(9);
             }
