@@ -7,10 +7,10 @@ The authenticator is the component of the application security infrastructure re
 ## Quick start
 ```bash
 cd webapps
-git clone https://github.com/rfa-lopes/SoftwareSecurityTP1.git
+git clone https://github.com/rfa-lopes/SS-TP1.git
 cd ../bin
 catalina.bat run
-chrome.exe http://localhost:8080/SoftwareSecurityTP1/
+chrome.exe http://localhost:8080/SS-TP1/
 ```
 ---
 ## Diretorias
