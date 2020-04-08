@@ -23,5 +23,8 @@ hs_err_pid*
 
 #Intellij
 .ideia/*
+/.ideia/*
+/.ideia/
+/.ideia
 /WEB-INF/database/database.db
 
