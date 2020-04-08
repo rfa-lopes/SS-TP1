@@ -33,6 +33,15 @@ username  | passwordHash            | isloggedin | islocked |  usertype
   root    | Af3ddsIjq...Lfg41Hg==   |     1      |    0     | ADMIN
   Rodrigo | qgUS75wu2...OX2yZuA==   |     0      |    0     | ACCOUNT
   Miguel  | 4fQDlIjq3...uyOX1Hg==   |     0      |    1     | ACCOUNT
+  
+**Nota:** [passwordHash] = password do utilizador mas 'salt' de forma a que passwords iguais entre utilizadores diferentes, não apareça linearmente na base de dados.
+
+Exemplo:
+
+username  | passwordHash            |passwordText| 
+  --------| ------------------------|------------|
+  user1   | Af3ddsIjq...Lfg41Hg==   |     123456 |
+  user2   | qgUS75wu2...OX2yZuA==   |     123456 |
 
 ---
 
