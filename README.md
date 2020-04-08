@@ -14,10 +14,9 @@ chrome.exe http://localhost:8080/SS-TP1/
 ```
 ---
 ## Diretorias
-* /WEB-INF - Compilado
-* /db - Base de dados
-* /src - Código
-* /Lib - Biblioteca de documentação e imagens
+* /WEB-INF - Compilado.
+* /WEB-INF/database - Base de dados.
+* /src - Código fonte.
 
 ---
 
