@@ -8,6 +8,7 @@ import Exceptions.AccountDoesNotExistsException;
 import Models.Account;
 import Models.UserType;
 import Utils.Hash;
+import Utils.Log;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,6 +16,9 @@ import java.sql.SQLException;
 public class AccountsTableClass implements AccountsTableInterface {
 
     private TableInterface table;
+
+    private static final String ROOT_USERNAME      = "root";
+    private static final String ROOT_PASSWORD      = "toor";
 
     private static final String TABLE_NAME      = "accounts";
     private static final String PRIMARY_KEY     = "username";
@@ -32,14 +36,17 @@ public class AccountsTableClass implements AccountsTableInterface {
     public AccountsTableClass() throws AccountAlreadyExistsException {
         table = new TableClass(TABLE_NAME);
         table.drop();
+        Log.info("Drop table: " + TABLE_NAME);
         table.addPrimaryKey(PRIMARY_KEY, AttributeTypeEnum.VARCHAR)
                 .addNotNullAttribute(COL_PASSWORD_HASH, AttributeTypeEnum.VARCHAR)
                 .addNotNullAttribute(COL_ISLOGGEDIN, AttributeTypeEnum.BOOLEAN)
                 .addNotNullAttribute(COL_ISLOCKED, AttributeTypeEnum.BOOLEAN)
                 .addNotNullAttribute(COL_USER_TYPE, AttributeTypeEnum.VARCHAR)
                 .create();
+        Log.info("Create table: " + TABLE_NAME);
 
-        insertAccount("root", "toor", UserType.ADMIN);
+        insertAccount(ROOT_USERNAME, ROOT_PASSWORD, UserType.ADMIN);
+        Log.info("Insert into: "+ROOT_USERNAME+":"+ROOT_PASSWORD);
     }
 
     @Override
@@ -58,7 +65,7 @@ public class AccountsTableClass implements AccountsTableInterface {
         try {
             table.remove(username);
         } catch (SQLException e) {
-            throw new AccountDoesNotExistsException();
+            throw new AccountDoesNotExistsException(username);
         }
     }
 
@@ -68,7 +75,7 @@ public class AccountsTableClass implements AccountsTableInterface {
         try {
             table.update(username, COL_PASSWORD_HASH, passwordhash);
         } catch (SQLException e) {
-            throw new AccountDoesNotExistsException();
+            throw new AccountDoesNotExistsException(username);
         }
     }
 
@@ -80,7 +87,7 @@ public class AccountsTableClass implements AccountsTableInterface {
             ResultSet result = table.getOne(username);
 
             if(!result.next())
-                throw new AccountDoesNotExistsException();
+                throw new AccountDoesNotExistsException(username);
 
             acc.setUsername(result.getString(1));
             acc.setPasswordhash(result.getString(2));
@@ -89,7 +96,7 @@ public class AccountsTableClass implements AccountsTableInterface {
             acc.setType(result.getString(5));
 
         } catch (SQLException e) {
-            throw new AccountDoesNotExistsException();
+            throw new AccountDoesNotExistsException(username);
         }
         return acc;
     }
@@ -99,7 +106,7 @@ public class AccountsTableClass implements AccountsTableInterface {
         try {
             table.update(username, COL_ISLOGGEDIN, TRUE);
         } catch (SQLException e) {
-            throw new AccountDoesNotExistsException();
+            throw new AccountDoesNotExistsException(username);
         }
     }
 
@@ -108,7 +115,7 @@ public class AccountsTableClass implements AccountsTableInterface {
         try {
             table.update(username, COL_ISLOGGEDIN, FALSE);
         } catch (SQLException e) {
-            throw new AccountDoesNotExistsException();
+            throw new AccountDoesNotExistsException(username);
         }
     }
 
@@ -117,7 +124,7 @@ public class AccountsTableClass implements AccountsTableInterface {
         try {
             table.update(username, COL_ISLOCKED, TRUE);
         } catch (SQLException e) {
-            throw new AccountDoesNotExistsException();
+            throw new AccountDoesNotExistsException(username);
         }
     }
 
@@ -126,7 +133,7 @@ public class AccountsTableClass implements AccountsTableInterface {
         try {
             table.update(username, COL_ISLOCKED, FALSE);
         } catch (SQLException e) {
-            throw new AccountDoesNotExistsException();
+            throw new AccountDoesNotExistsException(username);
         }
     }
 

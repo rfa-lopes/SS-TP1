@@ -3,8 +3,8 @@ package Exceptions;
 import Utils.Log;
 
 public class AccountDoesNotExistsException extends Exception{
-    public AccountDoesNotExistsException(){
+    public AccountDoesNotExistsException(String username){
         super();
-        Log.warn("Account does not exists.");
+        Log.warn("Account does not exist: " + username);
     }
 }

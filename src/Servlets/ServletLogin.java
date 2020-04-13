@@ -5,13 +5,13 @@ import Authenticator.AuthenticatorInterface;
 import Exceptions.AccountDoesNotExistsException;
 import Exceptions.LoginFailsException;
 import Models.Account;
+import Utils.Log;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.SignatureException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -25,43 +25,71 @@ public class ServletLogin extends HttpServlet {
         aut = AuthenticatorClass.getInstance();
     }
 
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-        out.println("<HTML>");
-        out.println("<HEAD></HEAD>");
-        out.println("<BODY>");
-        out.println("<h1>Login</h1>");
-        out.println("<form method='POST' action=''>");
-        out.println("<input type='username' placeholder='username' name='username'/>");
-        out.println("<input type='password' placeholder='password' name='password'/>");
-        out.println("<input type=submit value='Login'>");
-        out.println("</BODY>");
-        out.println("</HTML>");
-        out.flush();
+
+        try{
+            aut.login(req, resp);
+            resp.sendRedirect("home");
+        } catch (Exception e) {
+            out.println("<HTML>");
+            out.println("<HEAD></HEAD>");
+            out.println("<BODY>");
+            out.println("<h1>Login</h1>");
+            out.println("<form method='POST' action=''>");
+            out.println("<input type='username' placeholder='username' name='username'/>");
+            out.println("<input type='password' placeholder='password' name='password'/>");
+            out.println("<input type=submit value='Login'>");
+            out.println("</BODY>");
+            out.println("</HTML>");
+            out.flush();
+        }
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
 
-        try {
-            String username = req.getParameter("username");
-            String password = req.getParameter("password");
-            HttpSession session = req.getSession(true);
+        //Para evitar dois loggins do mesmo cliente
+        try{
+            aut.login(req, resp);
+            resp.sendRedirect("home");
+        } catch (Exception h) {
 
-            Account acc = aut.login(username, password);
+            try {
+                String username = req.getParameter("username");
+                String password = req.getParameter("password");
 
-            session.setAttribute("JWT", acc.getJwt());
+                //HttpSession session = req.getSession(true);
 
-            out.println("Login success");
+                Account acc = aut.login(username, password);
 
-        } catch (AccountDoesNotExistsException e) {
-            out.println("Login fails");
-        } catch (LoginFailsException e) {
-            out.println("Login fails");
+                Cookie autToken = new Cookie("Authorization", acc.getJwt());
+                autToken.setHttpOnly(true); //XSS mitigation
+                autToken.setSecure(false); //http=false ; https=true
+
+                resp.addCookie(autToken);
+
+                //session.setAttribute("JWT", acc.getJwt());
+
+                resp.sendRedirect("home");
+
+            } catch (AccountDoesNotExistsException e) {
+                doGet(req, resp);
+                out.println("Login fails");
+            } catch (LoginFailsException e) {
+                doGet(req, resp);
+                out.println("Login fails");
+            } catch (SignatureException e) {
+                doGet(req, resp);
+                Log.error("JWT invalid signature.");
+            } catch (ExpiredJwtException e) {
+                doGet(req, resp);
+                Log.error("JWT expired.");
+            }
+            out.flush();
         }
-        out.flush();
     }
 
     public void destroy() {

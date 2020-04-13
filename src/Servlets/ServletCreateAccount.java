@@ -7,6 +7,9 @@ import Exceptions.AccountDoesNotExistsException;
 import Exceptions.LoginFailsException;
 import Exceptions.PasswordDoesNotMatchException;
 import Models.Account;
+import Utils.Log;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.SignatureException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -48,8 +51,6 @@ public class ServletCreateAccount extends HttpServlet {
             out.println("Account Already Exists.");
         } catch (LoginFailsException e) {
             out.println("Login fails");
-        } catch (AccountDoesNotExistsException e) {
-            out.println("Login fails");
         }
     }
 
@@ -72,10 +73,15 @@ public class ServletCreateAccount extends HttpServlet {
             out.println("<form method='get' action='/SS-TP1'>");
             out.println("<input type='submit' value='Go main'>");
             out.println("</form>");
-        } catch (AccountDoesNotExistsException e) {
-            out.println("Login fails");
         } catch (LoginFailsException e) {
-            out.println("Login fails");
+            resp.sendRedirect("/SS-TP1/");
+            Log.error("Try access /create without authentication.");
+        } catch (SignatureException e){
+            resp.sendRedirect("/SS-TP1/");
+            Log.error("JWT invalid signature.");
+        } catch (ExpiredJwtException e){
+            resp.sendRedirect("/SS-TP1/");
+            Log.error("JWT expired.");
         }
         out.flush();
     }

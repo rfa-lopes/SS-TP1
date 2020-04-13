@@ -10,24 +10,21 @@ import Models.Account;
 import Models.UserType;
 import Utils.Hash;
 import Utils.JwtUtil;
-import io.jsonwebtoken.Claims;
-
+import Utils.Log;
+import io.jsonwebtoken.SignatureException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import java.util.Date;
-
-import static javax.management.remote.JMXConnectorServer.AUTHENTICATOR;
-
-public class AuthenticatorClass implements AuthenticatorInterface{
+public class AuthenticatorClass implements AuthenticatorInterface {
 
     AccountsTableInterface accountsTable;
 
     private AuthenticatorClass() {
         try {
             accountsTable = new AccountsTableClass();
-        } catch (AccountAlreadyExistsException e) { }
+        } catch (AccountAlreadyExistsException e) {
+        }
     }
 
     private static AuthenticatorClass ourInstance = new AuthenticatorClass();
@@ -39,7 +36,7 @@ public class AuthenticatorClass implements AuthenticatorInterface{
     @Override
     public void create_account(String name, String pwd1, String pwd2) throws PasswordDoesNotMatchException, AccountAlreadyExistsException {
 
-        if(!pwd1.equals(pwd2))
+        if (!pwd1.equals(pwd2))
             throw new PasswordDoesNotMatchException();
 
         accountsTable.insertAccount(name, pwd1, UserType.ACCOUNT);
@@ -66,12 +63,14 @@ public class AuthenticatorClass implements AuthenticatorInterface{
     @Override
     public Account login(String name, String pwd) throws AccountDoesNotExistsException, LoginFailsException {
         Account acc = this.get_account(name);
+
         String passwordhash = Hash.get(pwd, name);
 
-        if(!acc.getPasswordhash().equals(passwordhash))
-            throw new LoginFailsException();
+        if (!acc.getPasswordhash().equals(passwordhash))
+            throw new LoginFailsException(name);
 
         accountsTable.login(name);
+        Log.info("Login success by: " + name);
 
         return acc;
     }
@@ -82,30 +81,44 @@ public class AuthenticatorClass implements AuthenticatorInterface{
     }
 
     @Override
-    public Account login(HttpServletRequest req, HttpServletResponse resp) throws AccountDoesNotExistsException, LoginFailsException {
-        HttpSession session = req.getSession(true);
+    public Account login(HttpServletRequest req, HttpServletResponse resp) throws LoginFailsException, SignatureException {
 
-        String jwt = (String) session.getAttribute("JWT");
+        String jwt = getCookie(req);
 
-        if(jwt == null)
+        if (jwt == null)
             throw new LoginFailsException();
 
-        Claims claims = JwtUtil.parseJWT(jwt);
+        String username = JwtUtil.parseJWT(jwt);
 
-        String jti = claims.getId();
-        String iss = claims.getIssuer();
-        String sub = claims.getSubject();
-        Date exp = claims.getExpiration();
-
-        if(!iss.equals(JwtUtil.ISS) || !sub.equals(JwtUtil.SUB) || !exp.after(new Date()))
+        Account acc = null;
+        try {
+            acc = get_account(username);
+        } catch (AccountDoesNotExistsException e) {
+            Log.error("Authenticated account does not exist.");
             throw new LoginFailsException();
+        }
 
-        Account acc = get_account(jti);
-
-        if(!acc.isIsloggedin() || acc.isIslocked())
+        if (!acc.isIsloggedin() || acc.isIslocked())
             throw new LoginFailsException();
 
         return acc;
+    }
+
+
+    private String getCookie(HttpServletRequest req) {
+        Cookie[] cookies = req.getCookies();
+
+        if(cookies == null)
+            return null;
+
+        String cookieValue = null;
+
+        for (Cookie cookie : cookies)
+            if (cookie.getName().equals("Authorization")) {
+                cookieValue = cookie.getValue();
+                break;
+            }
+        return cookieValue;
     }
 
 }
