@@ -2,14 +2,8 @@ package Servlets;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
-import Exceptions.AccountAlreadyExistsException;
-import Exceptions.AccountDoesNotExistsException;
-import Exceptions.LoginFailsException;
-import Exceptions.PasswordDoesNotMatchException;
-import Models.Account;
-import Utils.Log;
-import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.SignatureException;
+import Exceptions.*;
+import Utils.Components;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,53 +31,24 @@ public class ServletCreateAccount extends HttpServlet {
         String password1 = req.getParameter("password1");
         String password2 = req.getParameter("password2");
 
+        String message;
+
         try {
-            aut.login(req, resp);
             aut.create_account(username, password1, password2);
-            out.println("<h3>Account created.</h3>");
-            out.println("<form method='get' action='/SS-TP1'>");
-            out.println("<input type='submit' value='Login'>");
-            out.println("</form>");
-            out.flush();
+            message = "Account created.";
         } catch (PasswordDoesNotMatchException e) {
-            out.println("Password does not match.");
+            message = "Password does not match.";
         } catch (AccountAlreadyExistsException e) {
-            out.println("Account Already Exists.");
-        } catch (LoginFailsException e) {
-            out.println("Login fails");
+            message = "Account Already Exists.";
+        } catch (EmptyInputException e) {
+            message = "Empty input.";
         }
+        out.println(Components.done(message));
+        out.flush();
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        try {
-            aut.login(req, resp);
-            out.println("<h3>Create Account</h3>");
-            out.println("<form method='post' action='create'>");
-            out.println("<input type='username' placeholder='username' name='username'/>");
-            out.println("</br>");
-            out.println("<input type='password' placeholder='password' name='password1'/>");
-            out.println("</br>");
-            out.println("<input type='password' placeholder='repeat password' name='password2'/>");
-            out.println("</br>");
-            out.println("<input type=submit value='Confirm'>");
-            out.println("</form>");
-
-            out.println("<form method='get' action='/SS-TP1'>");
-            out.println("<input type='submit' value='Go main'>");
-            out.println("</form>");
-        } catch (LoginFailsException e) {
-            resp.sendRedirect("/SS-TP1/");
-            Log.error("Try access /create without authentication.");
-        } catch (SignatureException e){
-            resp.sendRedirect("/SS-TP1/");
-            Log.error("JWT invalid signature.");
-        } catch (ExpiredJwtException e){
-            resp.sendRedirect("/SS-TP1/");
-            Log.error("JWT expired.");
-        }
-        out.flush();
+        doPost(req, resp);
     }
 
     public void destroy() {

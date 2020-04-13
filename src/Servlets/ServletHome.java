@@ -2,12 +2,10 @@ package Servlets;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
-import Exceptions.AccountDoesNotExistsException;
-import Exceptions.LoginFailsException;
 import Models.Account;
-import Utils.Log;
+import Models.UserType;
+import Utils.Components;
 import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.SignatureException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,24 +25,33 @@ public class ServletHome extends HttpServlet {
         aut = AuthenticatorClass.getInstance();
     }
 
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
+
+        out.println("<HTML><HEAD></HEAD><BODY>");
+
         try {
             Account acc = aut.login(req, resp);
-            out.println("<h1>HELLO "+acc.getUsername()+"</h1>");
-            //TODO:
-        } catch (LoginFailsException e) {
-            resp.sendRedirect("/SS-TP1/");
-            Log.error("Try access /home without authentication.");
-        } catch (SignatureException e) {
-            resp.sendRedirect("/SS-TP1/");
-            Log.error("JWT invalid signature.");
+            out.println("<h1>Hello "+acc.getUsername()+"</h1>");
+
+            if(acc.getType().equals(UserType.ADMIN.name())){
+                out.println(Components.addAccount());
+                out.println(Components.removeAccount());
+                out.println(Components.getAccount());
+            }
+
+            out.println(Components.logoutButton());
+
         } catch (ExpiredJwtException e) {
+            resp.sendRedirect("/SS-TP1/refreshtoken");
+        } catch (Exception e) {
             resp.sendRedirect("/SS-TP1/");
-            Log.error("JWT expired.");
         }
+
+        out.println("</BODY></HTML>");
         out.flush();
+
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {

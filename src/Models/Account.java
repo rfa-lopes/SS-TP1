@@ -2,6 +2,11 @@ package Models;
 
 import Utils.JwtUtil;
 
+import javax.servlet.http.Cookie;
+
+import static Utils.JwtUtil.JWT_TYPE;
+import static Utils.JwtUtil.REFRESH_TOKEN_TYPE;
+
 public class Account {
 
     String username;
@@ -12,8 +17,19 @@ public class Account {
 
     public Account() { }
 
-    public String getJwt() {
-        return JwtUtil.createJWT(username);
+    public Cookie getToken() {
+        Cookie token = new Cookie(JWT_TYPE, JwtUtil.createJWT(username));
+        token.setHttpOnly(true); //XSS mitigation
+        token.setSecure(false); //http=false ; https=true
+        return token;
+    }
+
+    public Cookie getRefreshToken() {
+        Cookie token = new Cookie(REFRESH_TOKEN_TYPE, JwtUtil.createJWTRefreshToken(username));
+        token.setHttpOnly(true); //XSS mitigation
+        token.setSecure(false); //http=false ; https=true
+        token.setPath("/SS-TP1/refreshtoken");
+        return token;
     }
 
     public String getUsername() {

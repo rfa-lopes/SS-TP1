@@ -2,19 +2,22 @@ package Authenticator;
 
 import DataBase.AccountsTableClass;
 import DataBase.AccountsTableInterface;
-import Exceptions.AccountAlreadyExistsException;
-import Exceptions.AccountDoesNotExistsException;
-import Exceptions.LoginFailsException;
-import Exceptions.PasswordDoesNotMatchException;
+import Exceptions.*;
 import Models.Account;
 import Models.UserType;
+import Utils.Cookies;
 import Utils.Hash;
 import Utils.JwtUtil;
 import Utils.Log;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.SignatureException;
-import javax.servlet.http.Cookie;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import java.util.List;
+
+import static Utils.JwtUtil.*;
 
 public class AuthenticatorClass implements AuthenticatorInterface {
 
@@ -34,7 +37,10 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public void create_account(String name, String pwd1, String pwd2) throws PasswordDoesNotMatchException, AccountAlreadyExistsException {
+    public void create_account(String name, String pwd1, String pwd2) throws PasswordDoesNotMatchException, AccountAlreadyExistsException, EmptyInputException {
+
+        if(name.equals("") || pwd1.equals("") || pwd2.equals("") )
+            throw new EmptyInputException();
 
         if (!pwd1.equals(pwd2))
             throw new PasswordDoesNotMatchException();
@@ -44,24 +50,31 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public void delete_account(String name) throws AccountDoesNotExistsException {
+    public void delete_account(String name) throws AccountDoesNotExistsException, EmptyInputException {
+
+        if(name.equals(""))
+            throw new EmptyInputException();
+
         accountsTable.deleteAccount(name);
     }
 
     @Override
-    public Account get_account(String name) throws AccountDoesNotExistsException {
+    public Account get_account(String name) throws AccountDoesNotExistsException, EmptyInputException {
+        if(name.equals(""))
+            throw new EmptyInputException();
         return accountsTable.getAccount(name);
     }
 
     @Override
-    public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, LoginFailsException {
-        this.login(name, pwd1);
+    public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, EmptyInputException {
+        if(name.equals("") || pwd1.equals("") || pwd2.equals("") )
+            throw new EmptyInputException();
 
         accountsTable.changePassword(name, pwd2);
     }
 
     @Override
-    public Account login(String name, String pwd) throws AccountDoesNotExistsException, LoginFailsException {
+    public Account login(String name, String pwd) throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException {
         Account acc = this.get_account(name);
 
         String passwordhash = Hash.get(pwd, name);
@@ -81,19 +94,22 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public Account login(HttpServletRequest req, HttpServletResponse resp) throws LoginFailsException, SignatureException {
+    public Account login(HttpServletRequest req, HttpServletResponse resp) throws LoginFailsException, SignatureException, ExpiredJwtException {
 
-        String jwt = getCookie(req);
+        List<String> tokens = Cookies.getCookiesInString(req, JWT_TYPE);
 
-        if (jwt == null)
+        if (tokens.size() == 0)
             throw new LoginFailsException();
 
-        String username = JwtUtil.parseJWT(jwt);
+        String token = tokens.get(0);
 
+        String username = null;
         Account acc = null;
+
         try {
+            username = JwtUtil.parseJWT(token);
             acc = get_account(username);
-        } catch (AccountDoesNotExistsException e) {
+        } catch (AccountDoesNotExistsException | EmptyInputException e) {
             Log.error("Authenticated account does not exist.");
             throw new LoginFailsException();
         }
@@ -102,23 +118,6 @@ public class AuthenticatorClass implements AuthenticatorInterface {
             throw new LoginFailsException();
 
         return acc;
-    }
-
-
-    private String getCookie(HttpServletRequest req) {
-        Cookie[] cookies = req.getCookies();
-
-        if(cookies == null)
-            return null;
-
-        String cookieValue = null;
-
-        for (Cookie cookie : cookies)
-            if (cookie.getName().equals("Authorization")) {
-                cookieValue = cookie.getValue();
-                break;
-            }
-        return cookieValue;
     }
 
 }

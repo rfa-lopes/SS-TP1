@@ -63,6 +63,7 @@ public class AccountsTableClass implements AccountsTableInterface {
     @Override
     public void deleteAccount(String username) throws AccountDoesNotExistsException {
         try {
+            //table.getOne(username);
             table.remove(username);
         } catch (SQLException e) {
             throw new AccountDoesNotExistsException(username);
