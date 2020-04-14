@@ -63,4 +63,21 @@ public class Components {
                 "User Type    : "+ acc.getType() +
                 "</br>";
     }
+
+    public static String changePassword(){
+
+        return "<hr>" +
+                "<h3>Change password</h3>"+
+                "<form method='post' action='/SS-TP1/change'>"+
+                "<input type='password' placeholder='actual password' name='password1'/>"+
+                "</br>"+
+                "<input type='password' placeholder='new password' name='password2'/>"+
+                "</br>"+
+                "<input type='password' placeholder='repeat password' name='password3'/>"+
+                "</br>"+
+                "<input type=submit value='Confirm'>"+
+                "</form>";
+    }
+
+
 }

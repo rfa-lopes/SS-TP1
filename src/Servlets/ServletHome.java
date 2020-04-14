@@ -41,6 +41,9 @@ public class ServletHome extends HttpServlet {
                 out.println(Components.getAccount());
             }
 
+            out.println(Components.changePassword());
+
+
             out.println(Components.logoutButton());
 
         } catch (ExpiredJwtException e) {
