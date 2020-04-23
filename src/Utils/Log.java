@@ -23,6 +23,11 @@ public class Log {
     private static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     private static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+    public static void initial(String msg, String ... args){
+        if(Configs.LOGS)
+            System.out.println(ANSI_BLUE + "[INIT] " + ANSI_RESET + " " + String.format(msg, args));
+    }
+
     public static void info(String msg, String ... args){
         if(Configs.LOGS)
             System.out.println(ANSI_GREEN + "[INFO] " + ANSI_RESET + " " + String.format(msg, args));

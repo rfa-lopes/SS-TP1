@@ -31,17 +31,11 @@ public class ServletRefreshToken extends HttpServlet {
         LinkedList<String> tokens = Cookies.getCookiesInString(req, REFRESH_TOKEN_TYPE);
         try {
             String refreshtoken = tokens.get(0);
-
             String username = JwtUtil.parseJWT(refreshtoken);
-
             Account acc = aut.get_account(username);
-
             Cookie authenticatorToken = acc.getToken();
-
             resp.addCookie(authenticatorToken);
-
             resp.sendRedirect("home");
-
         } catch (Exception e){
             resp.sendRedirect("/SS-TP1/login");
         }

@@ -5,8 +5,6 @@
 </head>
 <body>
 
-<h1>Account information: <h4>${gettype}</h4></h1>
-
 <style>
     table, th, td {
         border: 1px solid black;
@@ -16,7 +14,12 @@
         padding: 5px;
         text-align: left;
     }
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 </style>
+
+<h1>Account information: <h4>${gettype}</h4></h1>
 
 <table style="width:100%">
     <tr>

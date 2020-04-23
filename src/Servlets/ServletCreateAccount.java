@@ -36,7 +36,7 @@ public class ServletCreateAccount extends HttpServlet {
         try {
             aut.create_account(createusername, password1, password2);
             resp.setStatus(201);
-        } catch (PasswordDoesNotMatchException | EmptyInputException e) {
+        } catch (PasswordDoesNotMatchException | EmptyInputException | WeakPasswordException e) {
             resp.setStatus(400);
         } catch (AccountAlreadyExistsException e) {
             resp.setStatus(422);

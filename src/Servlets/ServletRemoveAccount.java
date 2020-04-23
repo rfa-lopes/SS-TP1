@@ -26,11 +26,8 @@ public class ServletRemoveAccount extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
         RequestDispatcher rd;
-
         Account acc = (Account)req.getAttribute("account");
-
         String deleteusername = (String)req.getAttribute("deleteusername");
-
         try {
             aut.delete_account(deleteusername);
             resp.setStatus(201);
@@ -39,7 +36,6 @@ public class ServletRemoveAccount extends HttpServlet {
         } catch (EmptyInputException e) {
             resp.setStatus(400);
         }
-
         req.setAttribute("username", acc.getUsername());
         rd = req.getRequestDispatcher("home.jsp");
         rd.forward(req, resp);

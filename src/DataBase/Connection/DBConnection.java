@@ -26,10 +26,10 @@ public class DBConnection {
             try {
                 File db = new File(DB_PATH + DB_NAME);
                 if (db.createNewFile())
-                    Log.warn("Creating new data base file in: %s", DB_PATH + DB_NAME);
+                    Log.initial("Creating new data base file in: %s", DB_PATH + DB_NAME);
                 Class.forName("org.sqlite.JDBC");
                 conn = DriverManager.getConnection(DB_CONN + DB_PATH + DB_NAME);
-                Log.info("Create connection to database in: " + DB_PATH + DB_NAME);
+                Log.initial("Create connection to database in: " + DB_PATH + DB_NAME);
             } catch (SQLException | IOException | ClassNotFoundException e) {
                 Log.error("Data base connection fail.");
                 System.exit(9);

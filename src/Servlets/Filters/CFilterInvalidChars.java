@@ -1,4 +1,4 @@
-package Servlets;
+package Servlets.Filters;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
@@ -38,8 +38,20 @@ public class CFilterInvalidChars implements Filter{
         Enumeration enumeration = req.getParameterNames();
         while(enumeration.hasMoreElements()){
             String parameterName = (String) enumeration.nextElement();
-            String value =  req.getParameter(parameterName);
-            value = value.replaceAll("[^A-Za-z0-9]", "X");
+            String value = req.getParameter(parameterName);
+
+            if(value.equals("")){
+                RequestDispatcher rd;
+                resp.setStatus(401);
+                rd = req.getRequestDispatcher("login.jsp");
+                rd.forward(req, resp);
+                return;
+            }
+
+            if(!parameterName.contains("password"))
+                value = value.replaceAll("[^A-Za-z0-9]", "X");
+            else
+                value = value.replaceAll("-", "X").concat("abc");
             req.setAttribute(parameterName, value);
         }
         Account acc = (Account)req.getAttribute("account");

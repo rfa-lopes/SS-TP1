@@ -12,6 +12,8 @@ public class Configs {
 
     public static final long REFRESH_TOKEN_TIME_HOURS = 20;
 
+    public static final int MIN_PASSWORD_SIZE = 8;
+
     public static final boolean ENCRYPT_TOKENS = false;
 
     public static final boolean LOGS = true;

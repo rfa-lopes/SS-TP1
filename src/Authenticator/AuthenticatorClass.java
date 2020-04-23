@@ -1,5 +1,6 @@
 package Authenticator;
 
+import Config.Configs;
 import DataBase.AccountsTableClass;
 import DataBase.AccountsTableInterface;
 import Exceptions.*;
@@ -15,7 +16,7 @@ import io.jsonwebtoken.SignatureException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.util.List;
+import java.util.*;
 
 import static Utils.JwtUtil.*;
 
@@ -36,25 +37,18 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public void create_account(String name, String pwd1, String pwd2) throws PasswordDoesNotMatchException, AccountAlreadyExistsException, EmptyInputException {
-
-        if(name.equals("") || pwd1.equals("") || pwd2.equals("") )
-            throw new EmptyInputException();
-
-        if (!pwd1.equals(pwd2))
-            throw new PasswordDoesNotMatchException();
-
+    public void create_account(String name, String pwd1, String pwd2) throws PasswordDoesNotMatchException, AccountAlreadyExistsException, EmptyInputException, WeakPasswordException {
+        verifyCreds(name, pwd1, pwd2);
         accountsTable.insertAccount(name, pwd1, UserType.ACCOUNT);
-
+        Log.info("Account created: " + name);
     }
 
     @Override
     public void delete_account(String name) throws AccountDoesNotExistsException, EmptyInputException {
-
         if(name.equals(""))
             throw new EmptyInputException();
-
         accountsTable.deleteAccount(name);
+        Log.info("Account deleted: " + name);
     }
 
     @Override
@@ -70,14 +64,10 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, EmptyInputException, PasswordDoesNotMatchException {
-        if(name.equals("") || pwd1.equals("") || pwd2.equals("") )
-            throw new EmptyInputException();
-
-        if(!pwd1.equals(pwd2) )
-            throw new PasswordDoesNotMatchException();
-
+    public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, EmptyInputException, PasswordDoesNotMatchException, WeakPasswordException {
+        verifyCreds(name, pwd1, pwd2);
         accountsTable.changePassword(name, pwd2);
+        Log.info("Password changed: " + name);
     }
 
     @Override
@@ -94,13 +84,13 @@ public class AuthenticatorClass implements AuthenticatorInterface {
 
         accountsTable.login(name);
         Log.info("Login success by: " + name);
-
         return acc;
     }
 
     @Override
     public void logout(Account acc) throws AccountDoesNotExistsException {
         accountsTable.logout(acc.getUsername());
+        Log.info("Logout success by: " + acc.getUsername());
     }
 
     @Override
@@ -113,11 +103,10 @@ public class AuthenticatorClass implements AuthenticatorInterface {
 
         String token = tokens.get(0);
 
-        String username = null;
-        Account acc = null;
+        Account acc;
 
         try {
-            username = JwtUtil.parseJWT(token);
+            String username = JwtUtil.parseJWT(token);
             acc = get_account(username);
         } catch (AccountDoesNotExistsException | EmptyInputException e) {
             Log.error("Authenticated account does not exist.");
@@ -132,6 +121,7 @@ public class AuthenticatorClass implements AuthenticatorInterface {
 
     @Override
     public void lock(String name) throws AccountDoesNotExistsException, EmptyInputException, IsAdminException {
+
         if(name.equals(""))
             throw new EmptyInputException();
 
@@ -144,6 +134,18 @@ public class AuthenticatorClass implements AuthenticatorInterface {
             accountsTable.setUnlocked(name);
         else
             accountsTable.setLocked(name);
+        Log.info("Locked account: " + name);
+    }
+
+    private void verifyCreds(String name, String pwd1, String pwd2) throws EmptyInputException, PasswordDoesNotMatchException, WeakPasswordException {
+        if(name.equals("") || pwd1.equals("") || pwd2.equals("") )
+            throw new EmptyInputException();
+
+        if(!pwd1.equals(pwd2) )
+            throw new PasswordDoesNotMatchException();
+
+        if(pwd1.length() < Configs.MIN_PASSWORD_SIZE)
+            throw new WeakPasswordException();
     }
 
 }

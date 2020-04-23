@@ -5,6 +5,17 @@
 </head>
 <body>
 
+<style>
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h3 {
+        font-family: "Lucida Console", Courier, monospace;
+    }
+
+</style>
+
 <%String username = (String)request.getAttribute("username");%>
 
 <h1>Welcome ${username} </h1>
@@ -92,28 +103,6 @@
 <form method='POST' action='/SS-TP1/logout'>
     <input type='submit' value='Logout'>
 </form>
-
-<% switch(response.getStatus()) {
-    case 200: //Ok
-        break;
-    case 201: //Ok
-%><h3 style="color:green">Done</h3><%
-        break;
-    case 400: //bad request
-%><h3 style="color:red">Bad request</h3><%
-        break;
-    case 401: //Unouthorized
-%><h3 style="color:red">Login fails</h3><%
-        break;
-    case 404: //Not found
-%><h3 style="color:red">Not exist</h3><%
-        break;
-    case 422: //Duplicate
-%><h3 style="color:#ff620c">Duplicate</h3><%
-        break;
-    default: //Server error
-%><h3 style="color:red">Server error</h3><%
-    }%>
 
 </body>
 </html>

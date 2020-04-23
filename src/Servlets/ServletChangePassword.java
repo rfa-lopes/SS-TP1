@@ -38,7 +38,7 @@ public class ServletChangePassword extends HttpServlet {
             aut.login(username, password);
             aut.change_pwd(username, new1, new2);
             resp.setStatus(201);
-        } catch (EmptyInputException | PasswordDoesNotMatchException e) {
+        } catch (EmptyInputException | PasswordDoesNotMatchException | WeakPasswordException e) {
             resp.setStatus(400);
         } catch (LoginFailsException | AccountDoesNotExistsException e) {
             resp.setStatus(401);

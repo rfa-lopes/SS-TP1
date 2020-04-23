@@ -5,6 +5,17 @@
 </head>
 <body>
 
+<style>
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h3 {
+        font-family: "Lucida Console", Courier, monospace;
+    }
+
+</style>
+
 <h1>Login</h1>
 <form method='POST' action='login'>
     <input type='username' placeholder='username' name='username'/>
@@ -17,16 +28,16 @@
         case 200: //Ok
             break;
         case 401: //Unouthorized
-    %><h3>Login fails</h3><%
+    %><h3 style="color:red">Login fails</h3><%
         break;
     case 404: //Unouthorized
-%><h3>Login fails</h3><%
+%><h3 style="color:red">Login fails</h3><%
         break;
     case 400: //bad request
-%><h3>Bad request</h3><%
+%><h3 style="color:red">Bad request</h3><%
         break;
     default: //Server error
-%><h3>Server error</h3><%
+%><h3 style="color:red">Server error</h3><%
     }%>
 
 </form>
