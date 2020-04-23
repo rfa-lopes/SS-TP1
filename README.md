@@ -48,6 +48,10 @@ A assinatura de todo o token (Header + Payload) serve para o servidor poder veri
 
 Após a implementação deste tipo de autenticação e depois de alguma pesquisa, fomos confrontados com o facto de que meter a password de X em X tempos (sendo X a diferença entre EXP e IAT) é algo inconveniente para um utilizador que poderá utilizar este sistema várias vezes por dia. Para isso decidimos implementar uma extenção ao nosso sistema de tokens, adicionado ao JWT um Refresh Token, que tem como objetivo servir como token de autenticação para uma revalidação de um token JWT sem que o utilizador se apreceba e continua a sua intereção com o sistema de modo transparente e seguro, visto que este fica guardado de forma segura (Utilizando a flag httpOnly de modo a mitigar ataques XSS) em local storage no browser do cliente e só é usado para revalidar novos JWT token. O Refresh Token tem o aspecto seguinte:
 
+![Tokens](Documentation/RefreshToken.png)
+
+É possivel verificar que a estrutura é semelhante à do JWT utilizado nos pedidos normais, com a diferença que este têm um tempo de expiração muito maior que poderá rondar os 14 a 60 dias, sendo que na nossa aplicação preferimos reduzir esse tempo a 20 horas, sendo este facilmente modificado no ficheiro de configurações e segredos [aqui]().
+
 ![Tokens](Documentation/TP1.png)
 
 ### Base de dados
