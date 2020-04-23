@@ -50,7 +50,9 @@ Após a implementação deste tipo de autenticação e depois de alguma pesquisa
 
 ![Tokens](Documentation/RefreshToken.png)
 
-É possivel verificar que a estrutura é semelhante à do JWT utilizado nos pedidos normais, com a diferença que este têm um tempo de expiração muito maior que poderá rondar os 14 a 60 dias, sendo que na nossa aplicação preferimos reduzir esse tempo a 20 horas, sendo este facilmente modificado no ficheiro de configurações e segredos [aqui]().
+É possivel verificar que a estrutura é semelhante à do JWT utilizado nos pedidos normais, com a diferença que este têm um tempo de expiração muito maior que poderá rondar os 14 a 60 dias, sendo que na nossa aplicação preferimos reduzir esse tempo a 20 horas, sendo este facilmente modificado no ficheiro de configurações e segredos [aqui](src/Config/Configs.java).
+
+A implementação deste sistema pode ser visto na figura seguinte, onde simulamos alguns pedidos do cliente ao sistema.
 
 ![Tokens](Documentation/TP1.png)
 
