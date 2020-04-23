@@ -27,6 +27,25 @@ Para uma maior segurança adicionámos três filtros ao nosso sistema, um que fi
 ![Tokens](Documentation/Filters.png)
 
 ### Sistema de tokens (JWT)
+Entre as duas opções que ponderamos (JWT ou Session Cookie), escolhemos a JWT por ser uma implementação mais desafiante e que nos obrigou a resolver alguns problemas. Também entendemos desde logo que utilizando JWT não precisariamos proteger a memória do sistema, sendo que cada cliente guarda as suas cookies e não o servidor (como acontece utilizando Sessions Cookies). Estes JWT são assinados pelo servidor e contém informação útil para o servidor autenticar o cliente. O nosso JWT foi implementado com o aspecto seguinte:
+
+![Tokens](Documentation/JWT.png)
+
+Como se pode ver na figura anterior, o JWT é contituido em 3 componentes:
+
+#### HEADER
+Onde contém informação sobre o token, o seu tipo (JWT) e o algoritmo utilizado na assinatura deste. Pensamos que esta informação poderia ser secreta de modo a não fornecer ao atacante qualquer tipo de informação sobre o token de modo a mitigar ainda mais possiveis ataques.
+
+#### PAYLOAD
+Onde está a informação do cliente útil para a sua autenticação. Pesquisamos sobre que tipo de informação poderia conter o payload no RFC 7519 que pode ser visto [aqui](https://tools.ietf.org/html/rfc7519#page-8).
+* JTI - Username do utilizador.
+* SUB - Assunto do token.
+* EXP - Data em que em que expira.
+* IAT - Data em que foi criado.
+
+#### SIGNATURE
+A assinatura de todo o token (Header + Payload) serve para o servidor poder verificar a sua integridade, de modo a mitigar possiveis ataques de adulteração.
+
 ![Tokens](Documentation/TP1.png)
 
 ### Base de dados
