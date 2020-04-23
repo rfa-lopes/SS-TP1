@@ -21,7 +21,12 @@ chrome.exe http://localhost:8080/SS-TP1/
 ---
 
 ## Arquitectura
-### Sistema de tokens
+### Filtros
+Para uma maior segurança adicionámos três filtros ao nosso sistema, um que fica encarregue de autenticar o utilizador de modo a saber quem este é (Authenticator Filter); outro cuja sua função é a verificação de privilégios para que cada utilizador tenha acesso apenas às funcionalidades que lhe são dirigidas (Roles Filter); e por fim, e para mitigar por completo ataques como SQL Injection e XSS, adicionamos um filtro que fica encarregue de monitorizar todo o input vindo dos utilizadores (Input Filter). Para facilitar em seguida temos uma visualização geral de como estes são usados de acordo com o tipo de pedido que o sistema recebe.
+
+![Tokens](Documentation/Filters.png)
+
+### Sistema de tokens (JWT)
 ![Tokens](Documentation/TP1.png)
 
 ### Base de dados
@@ -33,7 +38,7 @@ username  | passwordHash            | isloggedin | islocked |  usertype
   Rodrigo | qgUS75wu2...OX2yZuA==   |     0      |    0     | ACCOUNT
   Miguel  | 4fQDlIjq3...uyOX1Hg==   |     0      |    1     | ACCOUNT
   
-**Nota:** [passwordHash] = password do utilizador mas 'salt' de forma a que passwords iguais entre utilizadores diferentes, não apareça linearmente na base de dados.
+**Nota:** [passwordHash] = password do utilizador mais 'salt', de forma a que passwords iguais entre utilizadores diferentes não apareção iguais na base de dados.
 
 Exemplo:
 
