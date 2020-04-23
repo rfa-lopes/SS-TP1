@@ -2,8 +2,12 @@ package Servlets;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
+import Exceptions.AccountDoesNotExistsException;
+import Exceptions.EmptyInputException;
+import Exceptions.LoginFailsException;
 import Models.Account;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -20,29 +24,16 @@ public class ServletLogin extends HttpServlet {
         aut = AuthenticatorClass.getInstance();
     }
 
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        out.println("<HTML><HEAD></HEAD><BODY>");
-
-        out.println("<h1>Login</h1>");
-        out.println("<form method='POST' action=''>");
-        out.println("<input type='username' placeholder='username' name='username'/>");
-        out.println("<input type='password' placeholder='password' name='password'/>");
-        out.println("<input type=submit value='Login'>");
-        out.println("</form>");
-
-        if(resp.getStatus() == 401) {
-            out.println("<hr>");
-            out.println("Not authorized.");
-        }
-
-        out.println("</BODY></HTML>");
-        out.flush();
+        resp.setStatus(200);
+        RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
+        rd.forward(req, resp);
     }
 
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
+        RequestDispatcher rd;
 
         try {
             String username = req.getParameter("username");
@@ -56,14 +47,23 @@ public class ServletLogin extends HttpServlet {
             resp.addCookie(authenticatorToken);
             resp.addCookie(refreshToken);
 
-            resp.sendRedirect("home");
+            //resp.sendRedirect("home");
 
-        } catch (Exception e) {
-            PrintWriter out = resp.getWriter();
-            doGet(req, resp);
-            out.println("Not authorized.");
-            out.flush();
+            req.setAttribute("username", acc.getUsername());
+
+            rd = req.getRequestDispatcher("home.jsp");
+            rd.forward(req, resp);
+            return;
+
+        } catch (LoginFailsException e) {
+            resp.setStatus(401);
+        } catch (AccountDoesNotExistsException e) {
+            resp.setStatus(404);
+        } catch (EmptyInputException e) {
+            resp.setStatus(400);
         }
+        rd = req.getRequestDispatcher("login.jsp");
+        rd.forward(req, resp);
     }
 
     public void destroy() {
