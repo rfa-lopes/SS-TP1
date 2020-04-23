@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b282e26d-3f4d-48d6-a9f9-68aa2cc7e2f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Config/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/Configs.java" afterDir="false" />
-    </list>
+    <list default="true" id="b282e26d-3f4d-48d6-a9f9-68aa2cc7e2f5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +245,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587674783631" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587676212655" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/WEB-INF/lib" />
@@ -349,18 +347,17 @@
       <option name="presentableId" value="Default" />
       <updated>1587631747709</updated>
       <workItem from="1587631753212" duration="10983000" />
-      <workItem from="1587643436836" duration="26007000" />
+      <workItem from="1587643436836" duration="26629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36990000" />
+    <option name="totallyTimeSpent" value="37612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17516778" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17516778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -370,7 +367,7 @@
       <window_info id="Azure Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3924581" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5069832" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.05179283" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
