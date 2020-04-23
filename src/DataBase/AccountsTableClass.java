@@ -1,5 +1,6 @@
 package DataBase;
 
+import Config.Configs;
 import DataBase.Table.AttributeTypeEnum;
 import DataBase.Table.TableClass;
 import DataBase.Table.TableInterface;
@@ -19,9 +20,6 @@ public class AccountsTableClass implements AccountsTableInterface {
 
     private TableInterface table;
 
-    private static final String ROOT_USERNAME      = "root";
-    private static final String ROOT_PASSWORD      = "toor";
-
     private static final String TABLE_NAME      = "accounts";
     private static final String PRIMARY_KEY     = "username";
 
@@ -32,8 +30,6 @@ public class AccountsTableClass implements AccountsTableInterface {
 
     private static final String FALSE   = "0";
     private static final String TRUE    = "1";
-
-    private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     public AccountsTableClass() throws AccountAlreadyExistsException {
         table = new TableClass(TABLE_NAME);
@@ -47,8 +43,8 @@ public class AccountsTableClass implements AccountsTableInterface {
                 .create();
         Log.info("Create table: " + TABLE_NAME);
 
-        insertAccount(ROOT_USERNAME, ROOT_PASSWORD, UserType.ADMIN);
-        Log.info("Insert into: "+ROOT_USERNAME+":"+ROOT_PASSWORD);
+        insertAccount(Configs.ROOT_USERNAME, Configs.ROOT_PASSWORD, UserType.ADMIN);
+        Log.info("Insert into: "+Configs.ROOT_USERNAME+":"+Configs.ROOT_PASSWORD);
     }
 
     @Override
