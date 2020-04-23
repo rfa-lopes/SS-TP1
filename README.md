@@ -95,10 +95,11 @@ Dividimos a estrutura de confidencialidade em 4 entidades:
 ## Funcionalidades
 * Login
 * Logout
+* Mudar password de uma conta
 * Criar conta (admin)
 * Apagar conta (admin)
 * Obter dados de uma conta (admin)
-* Mudar password de uma conta
+* Bloquear um utilizador (admin)
 
 ---
 
