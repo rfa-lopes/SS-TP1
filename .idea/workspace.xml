@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b282e26d-3f4d-48d6-a9f9-68aa2cc7e2f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SS-TP1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/azureSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_annotation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/classes/META-INF/SS-TP1.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/database/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Authenticator/AuthenticatorClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Authenticator/AuthenticatorClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Authenticator/AuthenticatorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Authenticator/AuthenticatorInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/AccountsTableClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/AccountsTableClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/AccountsTableInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/AccountsTableInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Table/TableClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Table/TableClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Table/TableInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Table/TableInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/AccountAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/AccountAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/AccountDoesNotExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/AccountDoesNotExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/EmptyInputException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/EmptyInputException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/LoginFailsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/LoginFailsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/PasswordDoesNotMatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/PasswordDoesNotMatchException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/AuthenticatorFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/AFilterAuthenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/ServletChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/ServletChangePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/ServletCreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/ServletCreateAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/ServletGetAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/ServletGetAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/ServletHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/ServletHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/ServletLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/ServletLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/ServletLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/ServletLogout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/ServletRefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/ServletRefreshToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/ServletRemoveAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/ServletRemoveAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Components.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Hash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/SymetricEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/SymetricEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/Configs.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,15 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Servlets/AFilterAuthenticator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Exceptions/AccountAlreadyExistsException.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -152,8 +105,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Config/Configs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+            <state relative-caret-position="238">
+              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/JwtUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-216">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -225,10 +187,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-1647" />
-    <option name="y" value="69" />
-    <option name="width" value="1616" />
-    <option name="height" value="882" />
+    <option name="x" value="193" />
+    <option name="y" value="-15" />
+    <option name="width" value="2104" />
+    <option name="height" value="1157" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -270,6 +232,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SS-TP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SS-TP1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -279,7 +247,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587673657292" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587674783631" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/WEB-INF/lib" />
@@ -381,18 +349,18 @@
       <option name="presentableId" value="Default" />
       <updated>1587631747709</updated>
       <workItem from="1587631753212" duration="10983000" />
-      <workItem from="1587643436836" duration="25297000" />
+      <workItem from="1587643436836" duration="26007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36280000" />
+    <option name="totallyTimeSpent" value="36990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1608" y="78" width="1616" height="886" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16773778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17516778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -402,7 +370,7 @@
       <window_info id="Azure Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37317398" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3924581" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.05179283" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -412,7 +380,7 @@
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32934928" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3282123" />
       <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
@@ -426,7 +394,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.07455013" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.077852346" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,17 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/JwtUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -778,10 +735,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/JwtUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Config/Configs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        <state relative-caret-position="238">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
         </state>
       </provider>
     </entry>
