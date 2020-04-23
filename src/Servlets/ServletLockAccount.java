@@ -4,7 +4,9 @@ import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
 import Exceptions.AccountDoesNotExistsException;
 import Exceptions.EmptyInputException;
+import Exceptions.IsAdminException;
 import Models.Account;
+import Models.UserType;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,8 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/get")
-public class ServletGetAccount extends HttpServlet {
+@WebServlet(urlPatterns = "/lock")
+public class ServletLockAccount extends HttpServlet {
 
     AuthenticatorInterface aut;
 
@@ -25,30 +27,24 @@ public class ServletGetAccount extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+
         resp.setContentType("text/html");
         RequestDispatcher rd;
 
-        Account a = (Account)req.getAttribute("account");
+        Account acc = (Account)req.getAttribute("account");
 
-        String getformusername = (String)req.getAttribute("getformusername");
-
-        try{
-            Account acc = aut.get_account(getformusername);
-            req.setAttribute("getusername", acc.getUsername());
-            req.setAttribute("getpassword", acc.getPasswordhash());
-            req.setAttribute("gettype", acc.getType());
-            req.setAttribute("getisloggin", ((Boolean)acc.isIsloggedin()).toString());
-            req.setAttribute("getislocked", ((Boolean)acc.isIslocked()).toString());
-
-            rd = req.getRequestDispatcher("account.jsp");
-            rd.forward(req, resp);
-            return;
+        try {
+            String lockusername = (String)req.getAttribute("lockformusername");
+            aut.lock(lockusername);
+            resp.setStatus(201);
         } catch (AccountDoesNotExistsException e) {
             resp.setStatus(404);
         } catch (EmptyInputException e) {
             resp.setStatus(400);
+        } catch (IsAdminException e) {
+            resp.setStatus(500);
         }
-        req.setAttribute("username", a.getUsername());
+        req.setAttribute("username", acc.getUsername());
         rd = req.getRequestDispatcher("home.jsp");
         rd.forward(req, resp);
     }

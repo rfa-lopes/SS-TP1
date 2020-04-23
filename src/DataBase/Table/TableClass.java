@@ -50,7 +50,6 @@ public class TableClass implements TableInterface{
         try {
             PreparedStatement sttm = conn.prepareStatement(query);
             sttm.execute();
-            //Log.info("Table create: %s", tableName);
         } catch (SQLException e) {
             Log.error("Table create: %s", tableName);
         }
@@ -64,7 +63,6 @@ public class TableClass implements TableInterface{
         try {
             PreparedStatement sttm = conn.prepareStatement(query);
             sttm.executeUpdate();
-            //Log.info("Table drop:   %s", tableName);
         } catch (SQLException e) {
             Log.warn("Table drop:   %s", tableName);
         }
@@ -79,7 +77,6 @@ public class TableClass implements TableInterface{
         query = query.substring(0, query.length() - 2) + ")";
         PreparedStatement sttm = conn.prepareStatement(query);
         sttm.executeUpdate();
-        //Log.info("Table insert:   %s", elems[0]);
     }
 
     @Override
@@ -88,16 +85,14 @@ public class TableClass implements TableInterface{
         String query = "DELETE FROM " + tableName + " WHERE " + primaryKeyAttribute.getName() + " LIKE '" + primKey + "'";
         PreparedStatement sttm = conn.prepareStatement(query);
         sttm.execute();
-        //Log.info("Table remove:   %s", primKey);
     }
 
     @Override
     public void update(String primKey, String UpdateCol, String UpdateValue) throws SQLException {
         Connection conn = DBConnection.getInstance();
-        String query = "UPDATE " + tableName + " SET "+UpdateCol+ "= '"+UpdateValue+"' WHERE "+primaryKeyAttribute.getName()+" LIKE '" + primKey+"'";
+        String query = "UPDATE " + tableName + " SET "+UpdateCol+ "='"+UpdateValue+"' WHERE "+primaryKeyAttribute.getName()+" LIKE '" + primKey+"'";
         PreparedStatement sttm = conn.prepareStatement(query);
         sttm.executeUpdate();
-        //Log.info("Table update:   %s", primKey);
     }
 
     @Override
@@ -105,7 +100,14 @@ public class TableClass implements TableInterface{
         Connection conn = DBConnection.getInstance();
         String query = "SELECT * FROM " + tableName + " WHERE " + primaryKeyAttribute.getName() + " LIKE '" + primKey + "'";
         PreparedStatement sttm = conn.prepareStatement(query);
-        //Log.info("Table getOne:   %s", primKey);
+        return sttm.executeQuery();
+    }
+
+    @Override
+    public ResultSet getAll() throws SQLException {
+        Connection conn = DBConnection.getInstance();
+        String query = "SELECT * FROM " + tableName;
+        PreparedStatement sttm = conn.prepareStatement(query);
         return sttm.executeQuery();
     }
 

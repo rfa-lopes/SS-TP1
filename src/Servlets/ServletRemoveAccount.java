@@ -3,16 +3,15 @@ package Servlets;
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
 import Exceptions.*;
-import Utils.Components;
-import io.jsonwebtoken.ExpiredJwtException;
+import Models.Account;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/remove")
 public class ServletRemoveAccount extends HttpServlet {
@@ -24,28 +23,26 @@ public class ServletRemoveAccount extends HttpServlet {
         aut = AuthenticatorClass.getInstance();
     }
 
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
+        RequestDispatcher rd;
 
-        String username = req.getParameter("username");
+        Account acc = (Account)req.getAttribute("account");
 
-        String message;
+        String deleteusername = (String)req.getAttribute("deleteusername");
 
         try {
-            aut.delete_account(username);
-            message = "Account removed.";
+            aut.delete_account(deleteusername);
+            resp.setStatus(201);
         } catch (AccountDoesNotExistsException e) {
-            message = "Account does not exists.";
+            resp.setStatus(404);
         } catch (EmptyInputException e) {
-            message = "Empty input.";
+            resp.setStatus(400);
         }
-        out.println(Components.done(message));
-        out.flush();
-    }
 
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doPost(req, resp);
+        req.setAttribute("username", acc.getUsername());
+        rd = req.getRequestDispatcher("home.jsp");
+        rd.forward(req, resp);
     }
 
     public void destroy() {

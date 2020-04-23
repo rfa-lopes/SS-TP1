@@ -26,7 +26,6 @@ public class Hash {
             MessageDigest hashF = MessageDigest.getInstance(HASH_ALG);
             return hashF.getDigestLength();
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
             return 0;
         }
     }

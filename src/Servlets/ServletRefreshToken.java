@@ -43,12 +43,8 @@ public class ServletRefreshToken extends HttpServlet {
             resp.sendRedirect("home");
 
         } catch (Exception e){
-            resp.sendRedirect("/SS-TP1/");
+            resp.sendRedirect("/SS-TP1/login");
         }
-    }
-
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        doGet(req, resp);
     }
 
     public void destroy() {

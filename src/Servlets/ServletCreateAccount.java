@@ -3,15 +3,15 @@ package Servlets;
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
 import Exceptions.*;
-import Utils.Components;
+import Models.Account;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/create")
 public class ServletCreateAccount extends HttpServlet {
@@ -23,32 +23,29 @@ public class ServletCreateAccount extends HttpServlet {
         aut = AuthenticatorClass.getInstance();
     }
 
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
+        RequestDispatcher rd;
 
-        String username = req.getParameter("username");
-        String password1 = req.getParameter("password1");
-        String password2 = req.getParameter("password2");
+        Account acc = (Account)req.getAttribute("account");
 
-        String message;
+        String createusername = (String)req.getAttribute("createusername");
+        String password1 = (String)req.getAttribute("createpassword1");
+        String password2 = (String)req.getAttribute("createpassword2");
 
         try {
-            aut.create_account(username, password1, password2);
-            message = "Account created.";
-        } catch (PasswordDoesNotMatchException e) {
-            message = "Password does not match.";
+            aut.create_account(createusername, password1, password2);
+            resp.setStatus(201);
+        } catch (PasswordDoesNotMatchException | EmptyInputException e) {
+            resp.setStatus(400);
         } catch (AccountAlreadyExistsException e) {
-            message = "Account Already Exists.";
-        } catch (EmptyInputException e) {
-            message = "Empty input.";
+            resp.setStatus(422);
         }
-        out.println(Components.done(message));
-        out.flush();
-    }
 
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doPost(req, resp);
+        req.setAttribute("username", acc.getUsername());
+
+        rd = req.getRequestDispatcher("home.jsp");
+        rd.forward(req, resp);
     }
 
     public void destroy() {

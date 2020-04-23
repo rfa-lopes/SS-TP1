@@ -4,15 +4,14 @@ import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
 import Exceptions.*;
 import Models.Account;
-import Utils.Components;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/change")
 public class ServletChangePassword extends HttpServlet {
@@ -23,39 +22,31 @@ public class ServletChangePassword extends HttpServlet {
         aut = AuthenticatorClass.getInstance();
     }
 
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
+        RequestDispatcher rd;
 
-        String password1 = req.getParameter("password1");
-        String password2 = req.getParameter("password2");
-        String password3 = req.getParameter("password3");
+        Account acc = (Account)req.getAttribute("account");
 
-        String message;
+        String username = acc.getUsername();
+
+        String password = (String)req.getAttribute("changepassword1");
+        String new1 = (String)req.getAttribute("changepassword2");
+        String new2 = (String) req.getAttribute("changepassword3");
 
         try {
-            Account acc = aut.login(req, resp);
-            String username = acc.getUsername();
-            aut.login(username,password1);
-            aut.change_pwd(acc.getUsername(),password2,password3);
-            message = "Password changed.";
-        } catch (EmptyInputException e) {
-            message = "Empty input.";
-        } catch (LoginFailsException e) {
-            message = "Wrong password.";
-            e.printStackTrace();
-        } catch (AccountDoesNotExistsException e) {
-            message = "Empty input.";
-            e.printStackTrace();
-        } catch (PasswordDoesNotMatchException e) {
-            message = "Password does not match.";
+            aut.login(username, password);
+            aut.change_pwd(username, new1, new2);
+            resp.setStatus(201);
+        } catch (EmptyInputException | PasswordDoesNotMatchException e) {
+            resp.setStatus(400);
+        } catch (LoginFailsException | AccountDoesNotExistsException e) {
+            resp.setStatus(401);
         }
-        out.println(Components.done(message));
-        out.flush();
-    }
 
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doPost(req, resp);
+        req.setAttribute("username", username);
+        rd = req.getRequestDispatcher("home.jsp");
+        rd.forward(req, resp);
     }
 
     public void destroy() {

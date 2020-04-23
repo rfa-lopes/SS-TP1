@@ -2,7 +2,9 @@ package Servlets;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
-import io.jsonwebtoken.ExpiredJwtException;
+import Models.Account;
+import Models.UserType;
+import Utils.Log;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -10,10 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/create","/remove","/get"})
-public class AuthenticatorFilter implements Filter {
+@WebFilter(filterName="filter2", urlPatterns = {"/create","/remove","/get","/lock","/unlock"})
+public class BFilterRolesTypes implements Filter{
 
     AuthenticatorInterface aut;
+
     @Override
     public void init(FilterConfig filterConfig) {
         aut = AuthenticatorClass.getInstance();
@@ -25,17 +28,23 @@ public class AuthenticatorFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
 
-        try {
-            aut.login(req, resp);
-            filterChain.doFilter(req, resp);
-        } catch (ExpiredJwtException e) {
-            resp.sendRedirect("/SS-TP1/refreshtoken");
-        } catch (Exception e) {
-            resp.sendRedirect("/SS-TP1/home");
-        }
+        Log.filter("2-Role filter");
 
+        Account acc = (Account)req.getAttribute("account");
+        req.setAttribute("account", acc);
+
+        if(acc.getType().equalsIgnoreCase(UserType.ACCOUNT.name())){
+            RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
+            rd.forward(req, resp);
+        }
+        else
+        if(acc.getType().equalsIgnoreCase(UserType.ADMIN.name())){
+            req.setAttribute("account", acc);
+            filterChain.doFilter(req, resp);
+        }
     }
 
     @Override
     public void destroy() { }
+
 }

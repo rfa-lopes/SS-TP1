@@ -12,7 +12,6 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = {"/", "/login"})
 public class ServletLogin extends HttpServlet {
@@ -26,8 +25,16 @@ public class ServletLogin extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
+        RequestDispatcher rd;
+        try {
+            Account acc = aut.login(req,resp);
+            req.setAttribute("username", acc.getUsername());
+            rd = req.getRequestDispatcher("home.jsp");
+            rd.forward(req, resp);
+        } catch (Exception e) {}
+
         resp.setStatus(200);
-        RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
+        rd = req.getRequestDispatcher("login.jsp");
         rd.forward(req, resp);
     }
 
@@ -36,8 +43,8 @@ public class ServletLogin extends HttpServlet {
         RequestDispatcher rd;
 
         try {
-            String username = req.getParameter("username");
-            String password = req.getParameter("password");
+            String username = (String) req.getAttribute("username");
+            String password = (String) req.getAttribute("password");
 
             Account acc = aut.login(username, password);
 
@@ -47,10 +54,7 @@ public class ServletLogin extends HttpServlet {
             resp.addCookie(authenticatorToken);
             resp.addCookie(refreshToken);
 
-            //resp.sendRedirect("home");
-
             req.setAttribute("username", acc.getUsername());
-
             rd = req.getRequestDispatcher("home.jsp");
             rd.forward(req, resp);
             return;

@@ -16,5 +16,6 @@ public interface TableInterface {
     void remove(String primKey) throws SQLException;
     void update(String primKey, String UpdateCol, String UpdateValue) throws SQLException;
     ResultSet getOne(String primKey) throws SQLException;
+    ResultSet getAll() throws SQLException;
 
 }

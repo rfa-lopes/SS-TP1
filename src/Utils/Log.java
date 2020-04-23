@@ -1,5 +1,7 @@
 package Utils;
 
+import Config.Configs;
+
 public class Log {
 
     private static final String ANSI_RESET = "\u001B[0m";
@@ -22,15 +24,23 @@ public class Log {
     private static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
     public static void info(String msg, String ... args){
-        System.out.println(ANSI_GREEN + "[INFO] " + ANSI_RESET + " " + String.format(msg, args));
+        if(Configs.LOGS)
+            System.out.println(ANSI_GREEN + "[INFO] " + ANSI_RESET + " " + String.format(msg, args));
     }
 
     public static void warn(String msg, String ... args){
-        System.out.println(ANSI_YELLOW + "[WARN] " + ANSI_RESET + " " + String.format(msg, args));
+        if(Configs.LOGS)
+            System.out.println(ANSI_YELLOW + "[WARN] " + ANSI_RESET + " " + String.format(msg, args));
     }
 
     public static void error(String msg, String ... args){
-        System.out.println(ANSI_RED + "[ERRO] " + ANSI_RESET + " " + String.format(msg, args));
+        if(Configs.LOGS)
+            System.out.println(ANSI_RED + "[ERRO] " + ANSI_RESET + " " + String.format(msg, args));
+    }
+
+    public static void filter(String msg, String ... args){
+        if(Configs.LOGS)
+            System.out.println(ANSI_CYAN + "[FILT] " + ANSI_RESET + " " + String.format(msg, args));
     }
 
 }

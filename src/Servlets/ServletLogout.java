@@ -4,6 +4,7 @@ import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
 import Models.Account;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,19 +21,14 @@ public class ServletLogout extends HttpServlet {
         aut = AuthenticatorClass.getInstance();
     }
 
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
-
+        Account acc = (Account)req.getAttribute("account");
         try {
-            Account acc = aut.login(req, resp);
             aut.logout(acc);
         } catch (Exception e){ }
 
-        resp.sendRedirect("/SS-TP1/login");
-    }
-
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doPost(req, resp);
+        resp.sendRedirect("/SS-TP1");
     }
 
     public void destroy() {

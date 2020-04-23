@@ -12,6 +12,8 @@ import Utils.Log;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 public class AccountsTableClass implements AccountsTableInterface {
 
@@ -82,24 +84,29 @@ public class AccountsTableClass implements AccountsTableInterface {
 
     @Override
     public Account getAccount(String username) throws AccountDoesNotExistsException {
-
-        Account acc = new Account();
         try {
             ResultSet result = table.getOne(username);
 
             if(!result.next())
                 throw new AccountDoesNotExistsException(username);
 
-            acc.setUsername(result.getString(1));
-            acc.setPasswordhash(result.getString(2));
-            acc.setIsloggedin(result.getBoolean(3));
-            acc.setIslocked(result.getBoolean(4));
-            acc.setType(result.getString(5));
+            return getAccountFromResult(result);
 
         } catch (SQLException e) {
             throw new AccountDoesNotExistsException(username);
         }
-        return acc;
+    }
+
+    @Override
+    public List<Account> getAllAccounts() {
+        List<Account> list = new LinkedList<>();
+        try {
+            ResultSet result = table.getAll();
+            while(result.next())
+                list.add(getAccountFromResult(result));
+            return list;
+        } catch (SQLException e) {}
+        return list;
     }
 
     @Override
@@ -121,7 +128,7 @@ public class AccountsTableClass implements AccountsTableInterface {
     }
 
     @Override
-    public void locked(String username) throws AccountDoesNotExistsException {
+    public void setLocked(String username) throws AccountDoesNotExistsException {
         try {
             table.update(username, COL_ISLOCKED, TRUE);
         } catch (SQLException e) {
@@ -130,7 +137,7 @@ public class AccountsTableClass implements AccountsTableInterface {
     }
 
     @Override
-    public void unlocked(String username) throws AccountDoesNotExistsException {
+    public void setUnlocked(String username) throws AccountDoesNotExistsException {
         try {
             table.update(username, COL_ISLOCKED, FALSE);
         } catch (SQLException e) {
@@ -138,4 +145,13 @@ public class AccountsTableClass implements AccountsTableInterface {
         }
     }
 
+    private Account getAccountFromResult(ResultSet result) throws SQLException {
+        Account acc = new Account();
+        acc.setUsername(result.getString(1));
+        acc.setPasswordhash(result.getString(2));
+        acc.setIsloggedin(result.getBoolean(3));
+        acc.setIslocked(result.getBoolean(4));
+        acc.setType(result.getString(5));
+        return acc;
+    }
 }

@@ -26,8 +26,7 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     private AuthenticatorClass() {
         try {
             accountsTable = new AccountsTableClass();
-        } catch (AccountAlreadyExistsException e) {
-        }
+        } catch (AccountAlreadyExistsException e) { }
     }
 
     private static AuthenticatorClass ourInstance = new AuthenticatorClass();
@@ -66,6 +65,11 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
+    public List<Account> get_accounts() {
+        return accountsTable.getAllAccounts();
+    }
+
+    @Override
     public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, EmptyInputException, PasswordDoesNotMatchException {
         if(name.equals("") || pwd1.equals("") || pwd2.equals("") )
             throw new EmptyInputException();
@@ -73,14 +77,15 @@ public class AuthenticatorClass implements AuthenticatorInterface {
         if(!pwd1.equals(pwd2) )
             throw new PasswordDoesNotMatchException();
 
-
-
         accountsTable.changePassword(name, pwd2);
     }
 
     @Override
     public Account login(String name, String pwd) throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException {
         Account acc = this.get_account(name);
+
+        if(acc.isIslocked())
+            throw new LoginFailsException();
 
         String passwordhash = Hash.get(pwd, name);
 
@@ -123,6 +128,22 @@ public class AuthenticatorClass implements AuthenticatorInterface {
             throw new LoginFailsException();
 
         return acc;
+    }
+
+    @Override
+    public void lock(String name) throws AccountDoesNotExistsException, EmptyInputException, IsAdminException {
+        if(name.equals(""))
+            throw new EmptyInputException();
+
+        Account acc = get_account(name);
+
+        if(acc.getType().equalsIgnoreCase(UserType.ADMIN.name()))
+            throw new IsAdminException();
+
+        if(acc.isIslocked())
+            accountsTable.setUnlocked(name);
+        else
+            accountsTable.setLocked(name);
     }
 
 }

@@ -5,6 +5,6 @@ import Utils.Log;
 public class PasswordDoesNotMatchException extends Exception {
     public PasswordDoesNotMatchException(){
         super();
-        Log.warn("Password Does Not Match.");
+        Log.error("Password Does Not Match.");
     }
 }

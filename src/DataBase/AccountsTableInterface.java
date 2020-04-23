@@ -5,6 +5,8 @@ import Exceptions.AccountDoesNotExistsException;
 import Models.Account;
 import Models.UserType;
 
+import java.util.List;
+
 public interface AccountsTableInterface {
 
     void insertAccount(String username, String password, UserType type) throws AccountAlreadyExistsException;
@@ -15,11 +17,13 @@ public interface AccountsTableInterface {
 
     Account getAccount(String username) throws AccountDoesNotExistsException;
 
+    List<Account> getAllAccounts();
+
     void login(String username) throws AccountDoesNotExistsException;
 
     void logout(String username) throws AccountDoesNotExistsException;
 
-    void locked(String username) throws AccountDoesNotExistsException;
+    void setLocked(String username) throws AccountDoesNotExistsException;
 
-    void unlocked(String username) throws AccountDoesNotExistsException;
+    void setUnlocked(String username) throws AccountDoesNotExistsException;
 }
