@@ -66,9 +66,14 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, EmptyInputException {
+    public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, EmptyInputException, PasswordDoesNotMatchException {
         if(name.equals("") || pwd1.equals("") || pwd2.equals("") )
             throw new EmptyInputException();
+
+        if(!pwd1.equals(pwd2) )
+            throw new PasswordDoesNotMatchException();
+
+
 
         accountsTable.changePassword(name, pwd2);
     }

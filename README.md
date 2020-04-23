@@ -21,9 +21,8 @@ chrome.exe http://localhost:8080/SS-TP1/
 ---
 
 ## Arquitectura
-### Sistema
-
-//TODO
+### Sistema de tokens
+![Tokens](Documentation/TP1.png)
 
 ### Base de dados
 
