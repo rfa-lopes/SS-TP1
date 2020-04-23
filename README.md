@@ -56,6 +56,8 @@ A implementação deste sistema pode ser visto na figura seguinte, onde simulamo
 
 ![Tokens](Documentation/TP1.png)
 
+**Nota**: Para a mitigação de eventuais ataques aos sistema de tokens, decidimos utilizar encriptação simétrica de forma a esconder a informação deste token e eventuais informações relevantes a possiveis atacantes. A chave utilizada para este feito tem um tamanho de 128 bits (16 bytes) para que haja uma maior agilização e rapidez na encriptação e decriptação destes tokens de modo não perder mais velocidade na resposta ao cliente.
+
 ### Base de dados
 
 #### Accounts table
@@ -73,6 +75,20 @@ username  | passwordHash            |passwordText|
   --------| ------------------------|------------|
   user1   | Af3ddsIjq...Lfg41Hg==   |     123456 |
   user2   | qgUS75wu2...OX2yZuA==   |     123456 |
+
+---
+## Estrutura de Confidencialidade
+
+![Tokens](Documentation/ConfLattice.png)
+
+Dividimos a estrutura de confidencialidade em 4 entidades: 
+* *Public*, onde qualquer entidade tem acesso. Aqui a única funcionalidade permitida é o Login.
+
+* *Account*, que são as contas dos utilizadores que estão autenticados. São permitidas interações com: Logout, Change-password e todas de dominio público.
+
+* *Admin*, sendo este o administrador do sistema, tem poder epara operar em qualquer funcionalidade oferecida pelo sistema, que são: Create-account, remove-account, get-account, lock-account e todas as anteriormente mencionadas.
+
+* *Secrets*. Achamos por bem acrescentar esta "entidade" sendo este o sistema em si, e o único que têm acesso às chaves de encriptação, assinaturas, etc.
 
 ---
 
