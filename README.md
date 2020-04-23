@@ -46,6 +46,8 @@ Onde está a informação do cliente útil para a sua autenticação. Pesquisamo
 #### SIGNATURE
 A assinatura de todo o token (Header + Payload) serve para o servidor poder verificar a sua integridade, de modo a mitigar possiveis ataques de adulteração.
 
+Após a implementação deste tipo de autenticação e depois de alguma pesquisa, fomos confrontados com o facto de que meter a password de X em X tempos (sendo X a diferença entre EXP e IAT) é algo inconveniente para um utilizador que poderá utilizar este sistema várias vezes por dia. Para isso decidimos implementar uma extenção ao nosso sistema de tokens, adicionado ao JWT um Refresh Token, que tem como objetivo servir como token de autenticação para uma revalidação de um token JWT sem que o utilizador se apreceba e continua a sua intereção com o sistema de modo transparente e seguro, visto que este fica guardado de forma segura (Utilizando a flag httpOnly de modo a mitigar ataques XSS) em local storage no browser do cliente e só é usado para revalidar novos JWT token. O Refresh Token tem o aspecto seguinte:
+
 ![Tokens](Documentation/TP1.png)
 
 ### Base de dados
