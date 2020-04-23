@@ -17,6 +17,7 @@ chrome.exe http://localhost:8080/SS-TP1/
 * /WEB-INF - Compilado.
 * /WEB-INF/database - Base de dados.
 * /src - Código fonte.
+* /TLS - Ficheiros para configurações TLS
 
 ---
 
