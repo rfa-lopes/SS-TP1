@@ -43,7 +43,7 @@ public class AccountsTableClass implements AccountsTableInterface {
                 .create();
         Log.initial("Create table: " + TABLE_NAME);
 
-        insertAccount(Configs.ROOT_USERNAME, Configs.ROOT_PASSWORD+"abc", UserType.ADMIN);
+        insertAccount(Configs.ROOT_USERNAME, Configs.ROOT_PASSWORD, UserType.ADMIN);
         Log.initial("Insert into: "+Configs.ROOT_USERNAME+":"+Configs.ROOT_PASSWORD);
     }
 

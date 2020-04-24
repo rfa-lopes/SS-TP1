@@ -40,6 +40,7 @@ public class CFilterInvalidChars implements Filter{
             String parameterName = (String) enumeration.nextElement();
             String value = req.getParameter(parameterName);
 
+            //Não temos parametros vazios
             if(value.equals("")){
                 RequestDispatcher rd;
                 resp.setStatus(401);
@@ -48,10 +49,10 @@ public class CFilterInvalidChars implements Filter{
                 return;
             }
 
+            //Se não for uma password
             if(!parameterName.contains("password"))
                 value = value.replaceAll("[^A-Za-z0-9]", "X");
-            else
-                value = value.replaceAll("-", "X").concat("abc");
+
             req.setAttribute(parameterName, value);
         }
         Account acc = (Account)req.getAttribute("account");
