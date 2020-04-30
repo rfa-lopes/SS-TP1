@@ -27,7 +27,8 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     private AuthenticatorClass() {
         try {
             accountsTable = new AccountsTableClass();
-        } catch (AccountAlreadyExistsException e) { }
+        } catch (AccountAlreadyExistsException e) {
+        }
     }
 
     private static AuthenticatorClass ourInstance = new AuthenticatorClass();
@@ -37,7 +38,8 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public void create_account(String name, String pwd1, String pwd2) throws PasswordDoesNotMatchException, AccountAlreadyExistsException, EmptyInputException, WeakPasswordException {
+    public void create_account(String name, String pwd1, String pwd2) throws PasswordDoesNotMatchException,
+            AccountAlreadyExistsException, EmptyInputException, WeakPasswordException {
         verifyCreds(name, pwd1, pwd2);
         accountsTable.insertAccount(name, pwd1, UserType.ACCOUNT);
         Log.info("Account created: " + name);
@@ -45,7 +47,7 @@ public class AuthenticatorClass implements AuthenticatorInterface {
 
     @Override
     public void delete_account(String name) throws AccountDoesNotExistsException, EmptyInputException {
-        if(name.equals(""))
+        if (name.equals(""))
             throw new EmptyInputException();
         accountsTable.deleteAccount(name);
         Log.info("Account deleted: " + name);
@@ -53,7 +55,7 @@ public class AuthenticatorClass implements AuthenticatorInterface {
 
     @Override
     public Account get_account(String name) throws AccountDoesNotExistsException, EmptyInputException {
-        if(name.equals(""))
+        if (name.equals(""))
             throw new EmptyInputException();
         return accountsTable.getAccount(name);
     }
@@ -64,17 +66,19 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, EmptyInputException, PasswordDoesNotMatchException, WeakPasswordException {
+    public void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException,
+            EmptyInputException, PasswordDoesNotMatchException, WeakPasswordException {
         verifyCreds(name, pwd1, pwd2);
         accountsTable.changePassword(name, pwd2);
         Log.info("Password changed: " + name);
     }
 
     @Override
-    public Account login(String name, String pwd) throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException {
+    public Account login(String name, String pwd)
+            throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException {
         Account acc = this.get_account(name);
 
-        if(acc.isIslocked())
+        if (acc.isIslocked())
             throw new LoginFailsException();
 
         String passwordhash = Hash.get(pwd, name);
@@ -94,7 +98,8 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public Account login(HttpServletRequest req, HttpServletResponse resp) throws LoginFailsException, SignatureException, ExpiredJwtException {
+    public Account login(HttpServletRequest req, HttpServletResponse resp)
+            throws LoginFailsException, SignatureException, ExpiredJwtException {
 
         List<String> tokens = Cookies.getCookiesInString(req, JWT_TYPE);
 
@@ -122,29 +127,30 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     @Override
     public void lock(String name) throws AccountDoesNotExistsException, EmptyInputException, IsAdminException {
 
-        if(name.equals(""))
+        if (name.equals(""))
             throw new EmptyInputException();
 
         Account acc = get_account(name);
 
-        if(acc.getType().equalsIgnoreCase(UserType.ADMIN.name()))
+        if (acc.getType().equalsIgnoreCase(UserType.ADMIN.name()))
             throw new IsAdminException();
 
-        if(acc.isIslocked())
+        if (acc.isIslocked())
             accountsTable.setUnlocked(name);
         else
             accountsTable.setLocked(name);
         Log.info("Locked account: " + name);
     }
 
-    private void verifyCreds(String name, String pwd1, String pwd2) throws EmptyInputException, PasswordDoesNotMatchException, WeakPasswordException {
-        if(name.equals("") || pwd1.equals("") || pwd2.equals("") )
+    private void verifyCreds(String name, String pwd1, String pwd2)
+            throws EmptyInputException, PasswordDoesNotMatchException, WeakPasswordException {
+        if (name.equals("") || pwd1.equals("") || pwd2.equals(""))
             throw new EmptyInputException();
 
-        if(!pwd1.equals(pwd2) )
+        if (!pwd1.equals(pwd2))
             throw new PasswordDoesNotMatchException();
 
-        if(pwd1.length() < Configs.MIN_PASSWORD_SIZE)
+        if (pwd1.length() < Configs.MIN_PASSWORD_SIZE)
             throw new WeakPasswordException();
     }
 

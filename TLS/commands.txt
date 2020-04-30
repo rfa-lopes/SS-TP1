@@ -1,3 +1,1 @@
 keytool -genkey -keyalg RSA -alias ServerCert -keystore ServerKeyStore.jks -storepass changeit -validity 365 -keysize 4096 -storetype pkcs12
-
-keytool -export -alias ServerCert -file AuthServer.crt -keystore ServerKeyStore.jks
