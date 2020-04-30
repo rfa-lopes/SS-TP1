@@ -118,6 +118,15 @@ Dividimos a estrutura de confidencialidade em 4 entidades:
 
 ---
 
+## EXTRAS
+* Número máximo de tentativas de passwords incorretas utilizando remote address.
+* Implementação com Refresh token.
+* Encriptação de tokens (configurável)
+* Ficheiros JSP.
+* Mecanisco de Anti-SQLInjection / XSS (inputFilter)
+
+---
+
 ## Ferramentas e Tecnologias
 * [Intelliji](https://www.jetbrains.com/idea/)
 * [SQLite](https://www.sqlite.org/download.html)
