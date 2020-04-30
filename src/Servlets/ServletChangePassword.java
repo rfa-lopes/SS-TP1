@@ -35,12 +35,13 @@ public class ServletChangePassword extends HttpServlet {
         String new2 = (String) req.getAttribute("changepassword3");
 
         try {
-            aut.login(username, password);
+            String ip = req.getRemoteAddr();
+            aut.login(ip, username, password);
             aut.change_pwd(username, new1, new2);
             resp.setStatus(201);
         } catch (EmptyInputException | PasswordDoesNotMatchException | WeakPasswordException e) {
             resp.setStatus(400);
-        } catch (LoginFailsException | AccountDoesNotExistsException e) {
+        } catch (LoginFailsException | AccountDoesNotExistsException | ExceedNrTriesException e) {
             resp.setStatus(401);
         }
 

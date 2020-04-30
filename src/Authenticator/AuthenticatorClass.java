@@ -5,6 +5,7 @@ import DataBase.AccountsTableClass;
 import DataBase.AccountsTableInterface;
 import Exceptions.*;
 import Models.Account;
+import Models.Tries;
 import Models.UserType;
 import Utils.Cookies;
 import Utils.Hash;
@@ -22,11 +23,16 @@ import static Utils.JwtUtil.*;
 
 public class AuthenticatorClass implements AuthenticatorInterface {
 
+    private static final int MAX_USERS = 20;
+
     AccountsTableInterface accountsTable;
+
+    Map<String, Tries> triesMap;
 
     private AuthenticatorClass() {
         try {
             accountsTable = new AccountsTableClass();
+            triesMap = new Hashtable<>(MAX_USERS);
         } catch (AccountAlreadyExistsException e) {
         }
     }
@@ -74,8 +80,8 @@ public class AuthenticatorClass implements AuthenticatorInterface {
     }
 
     @Override
-    public Account login(String name, String pwd)
-            throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException {
+    public Account login(String ip, String name, String pwd)
+            throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException, ExceedNrTriesException {
         Account acc = this.get_account(name);
 
         if (acc.isIslocked())
@@ -83,8 +89,18 @@ public class AuthenticatorClass implements AuthenticatorInterface {
 
         String passwordhash = Hash.get(pwd, name);
 
-        if (!acc.getPasswordhash().equals(passwordhash))
+        Tries t = triesMap.get(ip);
+
+        if (!acc.getPasswordhash().equals(passwordhash)) {
+            if(t == null) {
+                triesMap.putIfAbsent(ip, new Tries());
+                t = triesMap.get(ip);
+            }
+            t.addTry();
             throw new LoginFailsException(name);
+        }
+
+        triesMap.put(ip, new Tries());
 
         accountsTable.login(name);
         Log.info("Login success by: " + name);

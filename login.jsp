@@ -1,3 +1,4 @@
+<%@ page import="Config.Configs" %>
 <%@ page contentType="text/html;charset=UTF-8" session="false"%>
 <html>
 <head>
@@ -35,6 +36,9 @@
         break;
     case 400: //bad request
 %><h3 style="color:red">Bad request</h3><%
+        break;
+    case 402: //bad request
+%><h3 style="color:red">Wait <%=Configs.TRIES_TIME%> minutes to attempt brute force password again!</h3><%
         break;
     default: //Server error
 %><h3 style="color:red">Server error</h3><%

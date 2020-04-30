@@ -14,7 +14,7 @@ public class Configs {
 
     public static final int MIN_PASSWORD_SIZE = 8;
 
-    public static final boolean ENCRYPT_TOKENS = false;
+    public static final boolean ENCRYPT_TOKENS = true;
 
     public static final boolean LOGS = true;
 
@@ -25,5 +25,9 @@ public class Configs {
     public static final String JWT_KEY_VALUE = "password_ultra_S$cret@--123456";
 
     public static final String SYM_ENCRYPTION_KEY = "FCT/UNLrocks!!di";
+
+    public static final long TRIES_TIME = 5;
+
+    public static final boolean ENABLE_TLS = true;
 
 }

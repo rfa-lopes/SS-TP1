@@ -4,6 +4,7 @@ import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
 import Exceptions.AccountDoesNotExistsException;
 import Exceptions.EmptyInputException;
+import Exceptions.ExceedNrTriesException;
 import Exceptions.LoginFailsException;
 import Models.Account;
 
@@ -46,7 +47,9 @@ public class ServletLogin extends HttpServlet {
             String username = (String) req.getAttribute("username");
             String password = (String) req.getAttribute("password");
 
-            Account acc = aut.login(username, password);
+            String ip = req.getRemoteAddr();
+
+            Account acc = aut.login(ip, username, password);
 
             Cookie authenticatorToken = acc.getToken();
             Cookie refreshToken = acc.getRefreshToken();
@@ -65,7 +68,10 @@ public class ServletLogin extends HttpServlet {
             resp.setStatus(404);
         } catch (EmptyInputException e) {
             resp.setStatus(400);
+        } catch (ExceedNrTriesException e) {
+            resp.setStatus(402);
         }
+
         rd = req.getRequestDispatcher("login.jsp");
         rd.forward(req, resp);
     }

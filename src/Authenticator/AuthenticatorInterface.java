@@ -16,7 +16,7 @@ public interface AuthenticatorInterface {
     Account get_account(String name) throws AccountDoesNotExistsException, EmptyInputException;
     List<Account> get_accounts();
     void change_pwd(String name, String pwd1, String pwd2) throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException, PasswordDoesNotMatchException, WeakPasswordException;
-    Account login(String name, String pwd) throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException;
+    Account login(String ip, String name, String pwd) throws AccountDoesNotExistsException, LoginFailsException, EmptyInputException, ExceedNrTriesException;
     void logout(Account acc) throws AccountDoesNotExistsException;
     Account login(HttpServletRequest req, HttpServletResponse resp) throws LoginFailsException, SignatureException, IOException;
     void lock(String name) throws AccountDoesNotExistsException, EmptyInputException, IsAdminException;

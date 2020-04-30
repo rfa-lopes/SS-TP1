@@ -1,5 +1,6 @@
 package Models;
 
+import Config.Configs;
 import Utils.JwtUtil;
 
 import javax.servlet.http.Cookie;
@@ -19,15 +20,15 @@ public class Account {
 
     public Cookie getToken() {
         Cookie token = new Cookie(JWT_TYPE, JwtUtil.createJWT(username));
-        token.setHttpOnly(true); //XSS mitigation
-        token.setSecure(false); //http=false ; https=true
+        token.setHttpOnly(true);
+        token.setSecure(Configs.ENABLE_TLS);
         return token;
     }
 
     public Cookie getRefreshToken() {
         Cookie token = new Cookie(REFRESH_TOKEN_TYPE, JwtUtil.createJWTRefreshToken(username));
-        token.setHttpOnly(true); //XSS mitigation
-        token.setSecure(false); //http=false ; https=true
+        token.setHttpOnly(true);
+        token.setSecure(Configs.ENABLE_TLS);
         token.setPath("/SS-TP1/refreshtoken");
         return token;
     }
