@@ -8,16 +8,30 @@ The authenticator is the component of the application security infrastructure re
 ```bash
 cd webapps
 git clone https://github.com/rfa-lopes/SS-TP1.git
+cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
 cd ../bin
 catalina.bat run
-chrome.exe http://localhost:8080/SS-TP1/
+chrome.exe https://localhost:8080/SS-TP1/
 ```
 ---
+
 ## Diretorias
 * /WEB-INF - Compilado.
 * /WEB-INF/database - Base de dados.
 * /src - Código fonte.
 * /TLS - Ficheiros para configurações TLS
+
+---
+
+## TLS
+* Algorithm: RSA
+* Key alias: ServerCert
+* Keystore: ServerKeyStore.jks
+* Keystore password: changeit
+* Key size: 4096
+* Store type: pkcs12
+
+Comando para criar a keystore [aqui](/TLS/commands.txt)
 
 ---
 
