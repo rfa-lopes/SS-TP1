@@ -158,6 +158,14 @@ public class AuthenticatorClass implements AuthenticatorInterface {
         Log.info("Locked account: " + name);
     }
 
+    @Override
+    public void checkPassword(String name, String pwd) throws EmptyInputException, AccountDoesNotExistsException, LoginFailsException {
+        Account acc = this.get_account(name);
+        String passwordhash = Hash.get(pwd, name);
+        if (!acc.getPasswordhash().equals(passwordhash))
+            throw new LoginFailsException(name);
+    }
+
     private void verifyCreds(String name, String pwd1, String pwd2)
             throws EmptyInputException, PasswordDoesNotMatchException, WeakPasswordException {
         if (name.equals("") || pwd1.equals("") || pwd2.equals(""))

@@ -44,14 +44,14 @@ public class CFilterInvalidChars implements Filter{
             if(value.equals("")){
                 RequestDispatcher rd;
                 resp.setStatus(401);
-                rd = req.getRequestDispatcher("login.jsp");
+                rd = req.getRequestDispatcher("home.jsp");
                 rd.forward(req, resp);
                 return;
             }
 
             //Se não for uma password
             if(!parameterName.contains("password"))
-                value = value.replaceAll("[^A-Za-z0-9]", "X");
+                value = value.replaceAll("[^A-Za-z0-9]", "?");
 
             req.setAttribute(parameterName, value);
         }

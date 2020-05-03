@@ -30,7 +30,7 @@
 %><h3 style="color:red">Bad request</h3><%
         break;
     case 401: //Unouthorized
-%><h3 style="color:red">Login fails</h3><%
+%><h3 style="color:red">Password incorrect</h3><%
         break;
     case 404: //Not found
 %><h3 style="color:red">Not exist</h3><%

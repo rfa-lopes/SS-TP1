@@ -20,4 +20,6 @@ public interface AuthenticatorInterface {
     void logout(Account acc) throws AccountDoesNotExistsException;
     Account login(HttpServletRequest req, HttpServletResponse resp) throws LoginFailsException, SignatureException, IOException;
     void lock(String name) throws AccountDoesNotExistsException, EmptyInputException, IsAdminException;
+
+    void checkPassword(String name, String pwd) throws EmptyInputException, AccountDoesNotExistsException, LoginFailsException;
 }

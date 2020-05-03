@@ -10,7 +10,7 @@ public class Configs {
 
     public static final long JWT_TIME_MINUTES = 10;
 
-    public static final long REFRESH_TOKEN_TIME_HOURS = 20;
+    public static final long REFRESH_TOKEN_TIME_HOURS = 20; //Nota final
 
     public static final int MIN_PASSWORD_SIZE = 8;
 
