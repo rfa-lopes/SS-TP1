@@ -135,6 +135,7 @@ Dividimos a estrutura de confidencialidade em 4 entidades:
 * [Intelliji](https://www.jetbrains.com/idea/)
 * [SQLite](https://www.sqlite.org/download.html)
 * [Tomcat 8.5.53](https://tomcat.apache.org/)
+* [BurpSuit](https://portswigger.net/burp)
 
 ---
 
