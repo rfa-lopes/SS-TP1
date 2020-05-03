@@ -13,6 +13,10 @@ cd ../bin
 catalina.bat run
 chrome.exe https://localhost:8080/SS-TP1/
 ```
+### Credênciais
+* admin: root
+* password: toor
+
 ---
 
 ## Diretorias
