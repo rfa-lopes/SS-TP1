@@ -20,10 +20,21 @@ cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
 
 ### Instalar MariaDB-Windows10 (opcional)
 **Nota**: SQLite está pronto a testar sem instalações apriori. Caso não se queira perder tempo com instalações do MariaDB o servidor está pronto a ser utilizado. Para configurar o servidor para que use MariaDB, troque a variavel USE_MARIA para *true* [aqui](src/Config/Configs.java).
+
+1) Download do zip: https://downloads.mariadb.org/mariadb/10.5.2/
+2) Copiar e descomprimir para webapp/WEB-INF/database2/
+3) Instalar:
 ```bash
-cd webapps
-cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
+mysql_install_db.exe --password=mariadb
+mysqld.exe
 ```
+**Nota**: Credênciais root:mariadb
+4) Testar instalação: 
+```bash
+mysql.exe -uroot -pmariadb
+```
+### Compilar código
+**Nota:** A compilação foi feita utilizando o Intelliji.
 
 ### Correr servidor
 ```bash
@@ -32,17 +43,19 @@ catalina.bat run
 chrome.exe https://localhost:8443/SS-TP1
 ```
 
-### Credênciais
-* admin: root
+### Credênciais do Admin
+* username: root
 * password: toor
+**Nota:** Configurável [aqui](src/Config/Configs.java)
 
 ---
 
 ## Diretorias
-* /WEB-INF - Compilado.
-* /WEB-INF/database - Base de dados.
-* /src - Código fonte.
-* /TLS - Ficheiros para configurações TLS
+* src - Código fonte.
+* TLS - Ficheiros para configurações TLS
+* WEB-INF - Compilado.
+* WEB-INF/database - Base de dados (SQLite).
+* WEB-INF/database2 - Base de dados (MariaDB).
 
 ---
 
@@ -55,6 +68,7 @@ chrome.exe https://localhost:8443/SS-TP1
 * Store type: pkcs12
 
 Comando para criar a keystore [aqui](/TLS/commands.txt)
+Ficheiro de configuração para o tomcat (server.xml)[/TLS/server.xml]
 
 ---
 
