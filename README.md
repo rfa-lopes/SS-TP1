@@ -199,9 +199,23 @@ Dividimos a estrutura de confidencialidade em 4 entidades:
 * [Tomcat 8.5.53](https://tomcat.apache.org/)
 * [BurpSuit](https://portswigger.net/burp)
 
+**Notas:**
+* SQLite: Utilizado para testes rápidos durante o desenvolvimento.
+* MariaDB: Utilizado no deploy da aplicação.
+* Burpsuit: Utilizado para testes da aplicação e testes de intrusão ao sistema.
+
 ---
 
-## Informação adicional
+## Utils
+
+### SQL Queries
+```sql
+show databases;
+use authenticator;
+show tables;
+select * from accounts;
+select * from loggers;
+```
 
 ### Comandos Git
 ```bash
@@ -212,6 +226,8 @@ git commit -m "Initial commit"
 git push
 git rm -r --cached Path/to/directories
 ```
+
+## Informação adicional
 
 ### Autores
 * Rodrigo Lopes - rfa.lopes@campus.fct.unl.pt
