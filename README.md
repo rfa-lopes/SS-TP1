@@ -19,7 +19,7 @@ cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
 ```
 
 ### Instalar MariaDB-Windows10 (opcional)
-**Nota**: SQLite está pronto a testar sem instalações apriori. Caso não se queira perder tempo com instalações do MariaDB, basta configurar o servidor para que use SQLite, para isso troque a variavel USE_MARIA para *false* [aqui](src/Config/Configs.java).
+**Nota**: SQLite está pronto a testar sem instalações apriori. Caso não se queira perder tempo com instalações do MariaDB o servidor está pronto a ser utilizado. Para configurar o servidor para que use MariaDB, troque a variavel USE_MARIA para *true* [aqui](src/Config/Configs.java).
 ```bash
 cd webapps
 cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
