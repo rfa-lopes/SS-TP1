@@ -27,5 +27,4 @@ hs_err_pid*
 /.ideia/
 /.ideia
 /WEB-INF/database/database.db
-WEB-INF/database2/mariadb-10.5.2-winx64
-
+WEB-INF/database2/*
