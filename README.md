@@ -19,7 +19,7 @@ cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
 ```
 
 ### Instalar MariaDB-Windows10 (opcional)
-**Nota**: SQLite está pronto a testar sem instalações apriori. Caso não se queira perder tempo com instalações do MariaDB, basta configurar o servidor para que use SQLite, para isso troque a variavel USE_MARIA para *false* [aqui](src/Config/Configs.java).
+**Nota**: SQLite está pronto a testar sem instalações apriori. Caso não se queira perder tempo com instalações do MariaDB o servidor está pronto a ser utilizado. Para configurar o servidor para que use MariaDB, troque a variavel USE_MARIA para *true* [aqui](src/Config/Configs.java).
 ```bash
 cd webapps
 cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
@@ -138,21 +138,25 @@ Dividimos a estrutura de confidencialidade em 4 entidades:
 * Apagar conta (admin)
 * Obter dados de uma conta (admin)
 * Bloquear um utilizador (admin)
+* Listar todos os utilizadores (admin)
+* Listar Loggers (admin)
 
 ---
 
 ## EXTRAS
 * Número máximo de tentativas de passwords incorretas utilizando remote address.
 * Implementação com Refresh token.
-* Encriptação de tokens (configurável)
+* Encriptação de tokens (configurável).
 * Ficheiros JSP.
-* Mecanisco de Anti-SQLInjection / XSS (inputFilter)
+* Mecanisco de Anti-SQLInjection / XSS (inputFilter).
+* MariaDB.
 
 ---
 
 ## Ferramentas e Tecnologias
 * [Intelliji](https://www.jetbrains.com/idea/)
 * [SQLite](https://www.sqlite.org/download.html)
+* [MariaDB](https://mariadb.org/)
 * [Tomcat 8.5.53](https://tomcat.apache.org/)
 * [BurpSuit](https://portswigger.net/burp)
 
