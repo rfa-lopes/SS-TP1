@@ -19,6 +19,7 @@ cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
 ```
 
 ### Instalar MariaDB-Windows10 (opcional)
+
 **Nota**: SQLite está pronto a testar sem instalações apriori. Caso não se queira perder tempo com instalações do MariaDB o servidor está pronto a ser utilizado. Para configurar o servidor para que use MariaDB, troque a variavel USE_MARIA para *true* [aqui](src/Config/Configs.java).
 
 1) Download do zip: https://downloads.mariadb.org/mariadb/10.5.2/
@@ -28,12 +29,14 @@ cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
 mysql_install_db.exe --password=mariadb
 mysqld.exe
 ```
+
 **Nota**: Credênciais root:mariadb
 4) Testar instalação: 
 ```bash
 mysql.exe -uroot -pmariadb
 ```
 ### Compilar código
+
 **Nota:** A compilação foi feita utilizando o Intelliji.
 
 ### Correr servidor
@@ -46,6 +49,7 @@ chrome.exe https://localhost:8443/SS-TP1
 ### Credênciais do Admin
 * username: root
 * password: toor
+
 **Nota:** Configurável [aqui](src/Config/Configs.java)
 
 ---
