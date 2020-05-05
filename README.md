@@ -138,21 +138,25 @@ Dividimos a estrutura de confidencialidade em 4 entidades:
 * Apagar conta (admin)
 * Obter dados de uma conta (admin)
 * Bloquear um utilizador (admin)
+* Listar todos os utilizadores (admin)
+* Listar Loggers (admin)
 
 ---
 
 ## EXTRAS
 * Número máximo de tentativas de passwords incorretas utilizando remote address.
 * Implementação com Refresh token.
-* Encriptação de tokens (configurável)
+* Encriptação de tokens (configurável).
 * Ficheiros JSP.
-* Mecanisco de Anti-SQLInjection / XSS (inputFilter)
+* Mecanisco de Anti-SQLInjection / XSS (inputFilter).
+* MariaDB.
 
 ---
 
 ## Ferramentas e Tecnologias
 * [Intelliji](https://www.jetbrains.com/idea/)
 * [SQLite](https://www.sqlite.org/download.html)
+* [MariaDB](https://mariadb.org/)
 * [Tomcat 8.5.53](https://tomcat.apache.org/)
 * [BurpSuit](https://portswigger.net/burp)
 
