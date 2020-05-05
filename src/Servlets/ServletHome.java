@@ -13,7 +13,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/home")
 public class ServletHome extends HttpServlet {
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
         Account acc = (Account)req.getAttribute("account");
         req.setAttribute("username", acc.getUsername());

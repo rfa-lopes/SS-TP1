@@ -2,7 +2,7 @@ package Config;
 
 public class Configs {
 
-    public static final String[] API_ADMIN = {"/create","/remove","/get","/lock","/unlock"};
+    public static final String[] API_ADMIN = {"/create","/remove","/get","/lock","/unlock","/list","/loggers"};
 
     public static final String[] API_ACCOUNT = {"/home","/change","/logout"};
 
@@ -29,5 +29,13 @@ public class Configs {
     public static final long TRIES_TIME = 5;
 
     public static final boolean ENABLE_TLS = true;
+
+    //true = MariaDB
+    //false = SQLite
+    public static final boolean USE_MARIA = true;
+
+    public static final String MARIA_USER = "root";
+
+    public static final String MARIA_PASSWORD = "mariadb";
 
 }

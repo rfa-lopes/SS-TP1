@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(filterName="filter1", urlPatterns = {"/create","/remove","/get","/lock","/unlock","/change","/home","/logout"})
+@WebFilter(filterName="filter1", urlPatterns = {"/create","/remove","/get","/lock","/unlock","/change","/home","/logout","/list","/loggers"})
 public class AFilterAuthenticator implements Filter {
 
     AuthenticatorInterface aut;
@@ -36,7 +36,6 @@ public class AFilterAuthenticator implements Filter {
         } catch (ExpiredJwtException e) {
             resp.sendRedirect("/SS-TP1/refreshtoken");
         } catch (Exception e) {
-            e.printStackTrace();
             resp.sendRedirect("/SS-TP1/");
         }
 

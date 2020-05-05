@@ -2,10 +2,13 @@ package Servlets;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
+import Authenticator.LoggerClass;
+import Authenticator.LoggerInterface;
 import Exceptions.AccountDoesNotExistsException;
 import Exceptions.EmptyInputException;
 import Exceptions.IsAdminException;
 import Models.Account;
+import Models.Operation;
 import Models.UserType;
 
 import javax.servlet.RequestDispatcher;
@@ -20,13 +23,15 @@ import java.io.IOException;
 public class ServletLockAccount extends HttpServlet {
 
     AuthenticatorInterface aut;
+    LoggerInterface logger;
 
     public void init() throws ServletException {
         super.init();
         aut = AuthenticatorClass.getInstance();
+        logger = LoggerClass.getInstance();
     }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
         resp.setContentType("text/html");
         RequestDispatcher rd;
@@ -36,6 +41,7 @@ public class ServletLockAccount extends HttpServlet {
         try {
             String lockusername = (String)req.getAttribute("lockformusername");
             aut.lock(lockusername);
+            logger.insertLogger(acc.getUsername(), Operation.LOCK_UNLOCK);
             resp.setStatus(201);
         } catch (AccountDoesNotExistsException e) {
             resp.setStatus(404);

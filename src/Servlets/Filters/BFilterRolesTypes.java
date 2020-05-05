@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(filterName="filter2", urlPatterns = {"/create","/remove","/get","/lock","/unlock"})
+@WebFilter(filterName="filter2", urlPatterns = {"/create","/remove","/get","/lock","/unlock","/list","/loggers"})
 public class BFilterRolesTypes implements Filter{
 
     AuthenticatorInterface aut;

@@ -2,9 +2,12 @@ package Servlets;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
+import Authenticator.LoggerClass;
+import Authenticator.LoggerInterface;
 import Exceptions.AccountDoesNotExistsException;
 import Exceptions.EmptyInputException;
 import Models.Account;
+import Models.Operation;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,13 +21,15 @@ import java.io.IOException;
 public class ServletGetAccount extends HttpServlet {
 
     AuthenticatorInterface aut;
+    LoggerInterface logger;
 
     public void init() throws ServletException {
         super.init();
         aut = AuthenticatorClass.getInstance();
+        logger = LoggerClass.getInstance();
     }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         resp.setContentType("text/html");
         RequestDispatcher rd;
 
@@ -42,6 +47,7 @@ public class ServletGetAccount extends HttpServlet {
 
             rd = req.getRequestDispatcher("account.jsp");
             rd.forward(req, resp);
+            logger.insertLogger(a.getUsername(), Operation.GET);
             return;
         } catch (AccountDoesNotExistsException e) {
             resp.setStatus(404);

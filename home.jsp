@@ -76,6 +76,20 @@
 
 <hr>
 
+<h3>List Accounts</h3>
+<form method='GET' action='/SS-TP1/list'>
+    <input type='submit' value='Go'>
+</form>
+
+<hr>
+
+<h3>List Loggers</h3>
+<form method='GET' action='/SS-TP1/loggers'>
+    <input type='submit' value='Go'>
+</form>
+
+<hr>
+
 <h3>Lock/Unlock Account</h3>
 <form method='post' action='lock'>
     <input type='username' placeholder='username' name='lockformusername'/>

@@ -2,6 +2,7 @@ package Authenticator;
 
 import Exceptions.*;
 import Models.Account;
+import Models.Logger;
 import io.jsonwebtoken.SignatureException;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,5 @@ public interface AuthenticatorInterface {
     void logout(Account acc) throws AccountDoesNotExistsException;
     Account login(HttpServletRequest req, HttpServletResponse resp) throws LoginFailsException, SignatureException, IOException;
     void lock(String name) throws AccountDoesNotExistsException, EmptyInputException, IsAdminException;
-
     void checkPassword(String name, String pwd) throws EmptyInputException, AccountDoesNotExistsException, LoginFailsException;
 }

@@ -2,11 +2,14 @@ package Servlets;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
+import Authenticator.LoggerClass;
+import Authenticator.LoggerInterface;
 import Exceptions.AccountDoesNotExistsException;
 import Exceptions.EmptyInputException;
 import Exceptions.ExceedNrTriesException;
 import Exceptions.LoginFailsException;
 import Models.Account;
+import Models.Operation;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,10 +21,12 @@ import java.io.IOException;
 public class ServletLogin extends HttpServlet {
 
     AuthenticatorInterface aut;
+    LoggerInterface logger;
 
     public void init() throws ServletException {
         super.init();
         aut = AuthenticatorClass.getInstance();
+        logger = LoggerClass.getInstance();
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -60,6 +65,7 @@ public class ServletLogin extends HttpServlet {
             req.setAttribute("username", acc.getUsername());
             rd = req.getRequestDispatcher("home.jsp");
             rd.forward(req, resp);
+            logger.insertLogger(acc.getUsername(), Operation.LOGIN);
             return;
 
         } catch (LoginFailsException e) {

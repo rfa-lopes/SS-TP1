@@ -3,10 +3,10 @@ package Authenticator;
 import Config.Configs;
 import DataBase.AccountsTableClass;
 import DataBase.AccountsTableInterface;
+import DataBase.LoggerTableClass;
+import DataBase.LoggerTableInterface;
 import Exceptions.*;
-import Models.Account;
-import Models.Tries;
-import Models.UserType;
+import Models.*;
 import Utils.Cookies;
 import Utils.Hash;
 import Utils.JwtUtil;
@@ -68,6 +68,7 @@ public class AuthenticatorClass implements AuthenticatorInterface {
 
     @Override
     public List<Account> get_accounts() {
+        Log.info("List accounts");
         return accountsTable.getAllAccounts();
     }
 

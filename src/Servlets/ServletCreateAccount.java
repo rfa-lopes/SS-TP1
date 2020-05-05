@@ -2,8 +2,11 @@ package Servlets;
 
 import Authenticator.AuthenticatorClass;
 import Authenticator.AuthenticatorInterface;
+import Authenticator.LoggerClass;
+import Authenticator.LoggerInterface;
 import Exceptions.*;
 import Models.Account;
+import Models.Operation;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,10 +20,12 @@ import java.io.IOException;
 public class ServletCreateAccount extends HttpServlet {
 
     AuthenticatorInterface aut;
+    LoggerInterface logger;
 
     public void init() throws ServletException {
         super.init();
         aut = AuthenticatorClass.getInstance();
+        logger = LoggerClass.getInstance();
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -35,6 +40,7 @@ public class ServletCreateAccount extends HttpServlet {
 
         try {
             aut.create_account(createusername, password1, password2);
+            logger.insertLogger(acc.getUsername(), Operation.CREATE);
             resp.setStatus(201);
         } catch (PasswordDoesNotMatchException | EmptyInputException | WeakPasswordException e) {
             resp.setStatus(400);
