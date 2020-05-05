@@ -5,14 +5,33 @@ The authenticator is the component of the application security infrastructure re
 ---
 
 ## Quick start
+
+### Clonar repositório
 ```bash
 cd webapps
 git clone https://github.com/rfa-lopes/SS-TP1.git
-cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
-cd ../bin
-catalina.bat run
-chrome.exe https://localhost:8080/SS-TP1/
 ```
+
+### Instalar configurações TLS
+```bash
+cd webapps
+cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
+```
+
+### Instalar MariaDB-Windows10 (opcional)
+**Nota**: SQLite está pronto a testar sem instalações apriori. Caso não se queira perder tempo com instalações do MariaDB, basta configurar o servidor para que use SQLite, para isso troque a variavel USE_MARIA para *false* [aqui](src/Config/Configs.java).
+```bash
+cd webapps
+cp -f ../conf/server.xml /SS-TP1/TLS/server.xml
+```
+
+### Correr servidor
+```bash
+cd bin
+catalina.bat run
+chrome.exe https://localhost:8443/SS-TP1
+```
+
 ### Credênciais
 * admin: root
 * password: toor
