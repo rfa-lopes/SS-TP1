@@ -97,7 +97,7 @@ Onde contém informação sobre o token, o seu tipo (JWT) e o algoritmo utilizad
 Onde está a informação do cliente útil para a sua autenticação. Pesquisamos sobre que tipo de informação poderia conter o payload no RFC 7519 que pode ser visto [aqui](https://tools.ietf.org/html/rfc7519#page-8).
 * JTI - Username do utilizador.
 * SUB - Assunto do token.
-* EXP - Data em que em que expira.
+* EXP - Data de expiração do token.
 * IAT - Data em que foi criado.
 
 #### SIGNATURE
