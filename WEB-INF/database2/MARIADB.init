@@ -1,0 +1,11 @@
+MARIADB
+
+mariadb-10.5.2-winx64\bin>mysql_install_db.exe --password=mariadb
+
+mariadb-10.5.2-winx64\bin>mysqld.exe
+
+mariadb-10.5.2-winx64\bin>mysql.exe -uroot -pmariadb
+
+
+
+
