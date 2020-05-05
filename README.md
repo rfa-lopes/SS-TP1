@@ -132,6 +132,26 @@ username  | passwordHash            |passwordText|
   --------| ------------------------|------------|
   user1   | Af3ddsIjq...Lfg41Hg==   |     123456 |
   user2   | qgUS75wu2...OX2yZuA==   |     123456 |
+  
+#### Loggers table
+
+  id  | username               | operation  | date                |
+  ----|------------------------|------------|---------------------|
+  0   | root                   | LOGIN      | 04-05-2020 09:45:43 |
+  1   | root                   | CREATE     | 04-05-2020 09:46:03 |
+  2   | root                   | LOGOUT     | 04-05-2020 09:47:17 |
+  3   | rodrigo                | LOGIN      | 04-05-2020 09:47:53 |
+  4   | rodrigo                | CHANGE     | 04-05-2020 10:55:22 |
+  
+A Logger Table é um tabela que contém todos os movimentos de todos os utilizadores, sendo as operações as seguintes:
+* LOGIN: Login
+* LOGOUT: Logout
+* CREATE: Create account
+* REMOVE: Remove account
+* LOCK_UNLOCK: Lock or unlock account
+* LIST: List all users
+* CHANGE: Change password
+* LOGGERS: Get Loggers
 
 ---
 ## Estrutura de Confidencialidade
