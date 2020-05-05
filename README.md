@@ -31,6 +31,7 @@ mysqld.exe
 ```
 
 **Nota**: Credênciais root:mariadb
+
 4) Testar instalação: 
 ```bash
 mysql.exe -uroot -pmariadb
