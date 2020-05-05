@@ -34,7 +34,11 @@ mysqld.exe
 
 4) Testar instalação: 
 ```bash
+cd mariadb-10.5.2-winx64/bin
 mysql.exe -uroot -pmariadb
+show databases;
+use authenticator;
+show tables;
 ```
 ### Compilar código
 
