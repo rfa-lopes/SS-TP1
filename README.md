@@ -77,7 +77,7 @@ chrome.exe https://localhost:8443/SS-TP1
 * Store type: pkcs12
 
 Comando para criar a keystore [aqui](/TLS/commands.txt)
-Ficheiro de configuração para o tomcat (server.xml)[/TLS/server.xml]
+Ficheiro de configuração para o tomcat (server.xml)[TLS/server.xml]
 
 ---
 
