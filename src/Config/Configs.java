@@ -32,7 +32,7 @@ public class Configs {
 
     //true = MariaDB
     //false = SQLite
-    public static final boolean USE_MARIA = true;
+    public static final boolean USE_MARIA = false;
 
     public static final String MARIA_USER = "root";
 
