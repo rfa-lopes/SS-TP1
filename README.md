@@ -30,7 +30,7 @@ mysql_install_db.exe --password=mariadb
 mysqld.exe
 ```
 
-**Nota**: Credênciais root:mariadb
+**Nota**: Credênciais root:mariadb, configurável [aqui](src/Config/Configs.java)
 
 4) Testar instalação: 
 ```bash
