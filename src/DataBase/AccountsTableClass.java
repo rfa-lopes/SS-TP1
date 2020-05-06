@@ -33,8 +33,10 @@ public class AccountsTableClass implements AccountsTableInterface {
 
     public AccountsTableClass() throws AccountAlreadyExistsException {
         table = new TableClass(TABLE_NAME);
+
         table.drop();
         Log.initial("Drop table: " + TABLE_NAME);
+
         table.addPrimaryKey(PRIMARY_KEY, AttributeTypeEnum.VARCHAR)
                 .addNotNullAttribute(COL_PASSWORD_HASH, AttributeTypeEnum.VARCHAR)
                 .addNotNullAttribute(COL_ISLOGGEDIN, AttributeTypeEnum.BOOLEAN)
@@ -44,7 +46,7 @@ public class AccountsTableClass implements AccountsTableInterface {
         Log.initial("Create table: " + TABLE_NAME);
 
         insertAccount(Configs.ROOT_USERNAME, Configs.ROOT_PASSWORD, UserType.ADMIN);
-        Log.initial("Insert into: "+Configs.ROOT_USERNAME+":"+Configs.ROOT_PASSWORD);
+        Log.initial("Insert into: " + Configs.ROOT_USERNAME + ":" + Configs.ROOT_PASSWORD);
     }
 
     @Override

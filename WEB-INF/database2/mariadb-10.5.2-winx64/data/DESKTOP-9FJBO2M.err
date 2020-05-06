@@ -89,3 +89,4 @@ InnoDB: using atomic writes.
 2020-05-05  0:25:17 22 [Warning] Aborted connection 22 to db: 'authenticator' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2020-05-05  0:47:19 23 [Warning] Aborted connection 23 to db: 'authenticator' user: 'root' host: 'localhost' (Got an error reading communication packets)
 2020-05-05  8:19:27 8 [Warning] Aborted connection 8 to db: 'authenticator' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2020-05-05  9:53:48 25 [Warning] Aborted connection 25 to db: 'mysql' user: 'root' host: 'localhost' (Got an error reading communication packets)

@@ -1,6 +1,7 @@
 package DataBase;
 
 import Authenticator.AuthenticatorClass;
+import Config.Configs;
 import DataBase.Table.AttributeTypeEnum;
 import DataBase.Table.TableClass;
 import DataBase.Table.TableInterface;
@@ -31,22 +32,24 @@ public class LoggerTableClass implements LoggerTableInterface{
     public LoggerTableClass() {
 
         table = new TableClass(TABLE_NAME);
+
         table.drop();
         Log.initial("Drop table: " + TABLE_NAME);
+
         table.addPrimaryKey(PRIMARY_KEY, AttributeTypeEnum.VARCHAR)
                 .addNotNullAttribute(COL_USERNAME, AttributeTypeEnum.VARCHAR)
                 .addNotNullAttribute(COL_OPERATION, AttributeTypeEnum.VARCHAR)
                 .addNotNullAttribute(COL_DATE, AttributeTypeEnum.VARCHAR)
                 .create();
         Log.initial("Create table: " + TABLE_NAME);
+
         countId = 0;
     }
 
     @Override
     public void insertLogger(String username, Operation operation) {
 
-        String pattern = "dd-MM-yyyy HH:mm:ss";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(Configs.DATE_PATTERN);
         String date = simpleDateFormat.format(new Date());
 
         try {

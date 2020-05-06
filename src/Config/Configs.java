@@ -2,6 +2,9 @@ package Config;
 
 public class Configs {
 
+    //Upgrades to TP2:
+    //Use Properties and config.properties.
+
     public static final String[] API_ADMIN = {"/create","/remove","/get","/lock","/unlock","/list","/loggers"};
 
     public static final String[] API_ACCOUNT = {"/home","/change","/logout"};
@@ -37,5 +40,7 @@ public class Configs {
     public static final String MARIA_USER = "root";
 
     public static final String MARIA_PASSWORD = "mariadb";
+
+    public static final String DATE_PATTERN = "dd-MM-yyyy HH:mm:ss";
 
 }

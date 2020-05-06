@@ -1,8 +1,6 @@
 package DataBase.Table;
 
-import Config.Configs;
-import DataBase.Connection.MariaDBConnection;
-import DataBase.Connection.SQLiteConnection;
+import DataBase.Connection.DBConnection;
 import Utils.Log;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,11 +41,7 @@ public class TableClass implements TableInterface{
 
     @Override
     public TableClass create(){
-        Connection conn = null;
-        if(Configs.USE_MARIA)
-            conn = MariaDBConnection.getInstance();
-        else
-            conn = SQLiteConnection.getInstance();
+        Connection conn = DBConnection.getInstance();
         String query = "CREATE TABLE " + tableName + " (";
         query += primaryKeyAttribute.toString() + " PRIMARY KEY,";
         for(AttributeInterface att : attributes)
@@ -64,11 +58,7 @@ public class TableClass implements TableInterface{
 
     @Override
     public void drop() {
-        Connection conn = null;
-        if(Configs.USE_MARIA)
-            conn = MariaDBConnection.getInstance();
-        else
-            conn = SQLiteConnection.getInstance();
+        Connection conn = DBConnection.getInstance();
         String query = "DROP TABLE " + tableName;
         try {
             PreparedStatement sttm = conn.prepareStatement(query);
@@ -80,11 +70,7 @@ public class TableClass implements TableInterface{
 
     @Override
     public void insert(String ... elems) throws SQLException {
-        Connection conn = null;
-        if(Configs.USE_MARIA)
-            conn = MariaDBConnection.getInstance();
-        else
-            conn = SQLiteConnection.getInstance();
+        Connection conn = DBConnection.getInstance();
         String query = "INSERT INTO " + tableName + " VALUES (";
         for( String elem : elems)
             query = query + "'" + elem + "', ";
@@ -95,11 +81,7 @@ public class TableClass implements TableInterface{
 
     @Override
     public void remove(String primKey) throws SQLException {
-        Connection conn = null;
-        if(Configs.USE_MARIA)
-            conn = MariaDBConnection.getInstance();
-        else
-            conn = SQLiteConnection.getInstance();
+        Connection conn = DBConnection.getInstance();
         String query = "DELETE FROM " + tableName + " WHERE " + primaryKeyAttribute.getName() + " LIKE '" + primKey + "'";
         PreparedStatement sttm = conn.prepareStatement(query);
         sttm.execute();
@@ -107,11 +89,7 @@ public class TableClass implements TableInterface{
 
     @Override
     public void update(String primKey, String UpdateCol, String UpdateValue) throws SQLException {
-        Connection conn = null;
-        if(Configs.USE_MARIA)
-            conn = MariaDBConnection.getInstance();
-        else
-            conn = SQLiteConnection.getInstance();
+        Connection conn = DBConnection.getInstance();
         String query = "UPDATE " + tableName + " SET "+UpdateCol+ "='"+UpdateValue+"' WHERE "+primaryKeyAttribute.getName()+" LIKE '" + primKey+"'";
         PreparedStatement sttm = conn.prepareStatement(query);
         sttm.executeUpdate();
@@ -119,11 +97,7 @@ public class TableClass implements TableInterface{
 
     @Override
     public ResultSet getOne(String primKey) throws SQLException {
-        Connection conn = null;
-        if(Configs.USE_MARIA)
-            conn = MariaDBConnection.getInstance();
-        else
-            conn = SQLiteConnection.getInstance();
+        Connection conn = DBConnection.getInstance();
         String query = "SELECT * FROM " + tableName + " WHERE " + primaryKeyAttribute.getName() + " LIKE '" + primKey + "'";
         PreparedStatement sttm = conn.prepareStatement(query);
         return sttm.executeQuery();
@@ -131,11 +105,7 @@ public class TableClass implements TableInterface{
 
     @Override
     public ResultSet getAll() throws SQLException {
-        Connection conn = null;
-        if(Configs.USE_MARIA)
-            conn = MariaDBConnection.getInstance();
-        else
-            conn = SQLiteConnection.getInstance();
+        Connection conn = DBConnection.getInstance();
         String query = "SELECT * FROM " + tableName;
         PreparedStatement sttm = conn.prepareStatement(query);
         return sttm.executeQuery();

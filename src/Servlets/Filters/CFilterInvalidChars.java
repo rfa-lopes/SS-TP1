@@ -44,8 +44,7 @@ public class CFilterInvalidChars implements Filter{
             if(value.equals("")){
                 RequestDispatcher rd;
                 resp.setStatus(401);
-                rd = req.getRequestDispatcher("home.jsp");
-                rd.forward(req, resp);
+                resp.sendRedirect("/SS-TP1/");
                 return;
             }
 
